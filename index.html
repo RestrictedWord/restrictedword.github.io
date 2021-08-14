@@ -1,0 +1,143 @@
+.smooth
+  header
+    h3 iOGO
+    ul
+      li
+        a(href="#one") Home
+      li
+        a(href="#two") About
+      li
+        a(href="#three") Services
+      li
+        a(href="#four") Reviews
+      li
+        a(href="#bottom") Contact
+  section#one
+    .content.parallax
+      div
+        h1 iOGO MEDiA
+        svg(class="title")
+          text(
+            x="0"
+            y="40"
+          ) iOGO MEDiA
+          path(
+            d="M 0 66 50 61"
+          )
+        
+        p.lead
+          | If you click on navigation links, smooth scrolling does not work, perhaps the functions are not supported by your browser. You can check the support on the
+          | 
+          a(class="leadlink" href="https://caniuse.com/#search=scroll-behavior" target="_blank") Can I use
+          |  site. 
+        p.lead
+          | And also added a parallax effect and logo animation, a sample of which you
+          | 
+          a(href="https://codepen.io/andrejsharapov/pen/PVJrLO" target="blank" class="leadlink") can find here.
+      div.blur
+        form
+          img(src="https://s.cdpn.io/profiles/user/2727382/80.jpg?1545923020")
+          input(type="text" placeholder="Email:")
+          input(type="text" placeholder="Password:")
+          a(class="button" href="#bottom") Follow me
+  section#two
+    h2 Section
+      span  two
+    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum blanditiis rerum, at sunt fugit nam, labore, quas voluptate et recusandae veniam ea dignissimos deserunt! Veritatis facilis repudiandae libero distinctio tempora.
+    .blocks
+      - for(x = 0;x < 4; x++)
+        .block
+          p TEXT or ICON
+    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam perspiciatis vel, soluta earum at iure error eos voluptates excepturi velit! Totam aliquam impedit architecto aperiam officia aliquid, aspernatur magnam recusandae!
+  section#three
+    .grid.g_two
+      div
+        h2 Section
+          span  three
+        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, esse rerum numquam, quos incidunt, sapiente tempore magnam modi libero maiores repellendus! Cupiditate dolore doloremque deserunt! Eaque accusamus rem cumque nisi.
+        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, esse rerum numquam, quos incidunt, sapiente tempore magnam modi libero maiores repellendus! Cupiditate dolore doloremque deserunt! Eaque accusamus rem cumque nisi.
+        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, esse rerum numquam, quos incidunt, sapiente tempore magnam modi libero maiores repellendus! Cupiditate dolore doloremque deserunt! Eaque accusamus rem cumque nisi.
+      div.flex.column
+        .flex.column
+          .flex.jcsb
+            h4 Comunity
+            span 77%
+          progress(
+            value="77" max="100"
+          )
+        .flex.column
+          .flex.jcsb
+            h4 Team and Developers
+            span 65%
+          progress(
+            value="65" max="100"
+          )
+        .flex.column
+          .flex.jcsb
+            h4 Marketing
+            span 88%
+          progress(
+            value="88" max="100"
+          )
+        .flex.column
+          .flex.jcsb
+            h4 Design
+            span 68%
+          progress(
+              value="68" max="100"
+            )
+  section#four
+    h2 Section
+      span  four
+    p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, dolores quibusdam! Hic facere inventore consequatur deleniti error, vero molestiae quam at iusto! Exercitationem voluptatem amet totam doloribus, tenetur et nobis?
+    .blocks
+      - for(x = 0;x < 2; x++)
+        .block
+          h4 Author
+          p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel sunt beatae ducimus eaque molestiae aliquid consequuntur perspiciatis dolores soluta iste voluptatibus, unde voluptate neque earum qui culpa saepe commodi. Tenetur?
+      .dots
+        - for(x = 0;x < 6; x++)
+          .dot
+  footer#bottom
+    div.widgets
+      h3 iOGO
+      - var x = 4;
+        div.widget
+          h5.follow Follow me
+          ul
+            li
+              a(href="https://dribbble.com/andrejsharapov" target="blank") Dribbble
+            li
+              a(href="https://codepen.io/andrejsharapov" target="blank") CodePen
+            li
+              a(href="https://twitter.com/andrejsharapov" target="blank") Twitter
+            li
+              a(href="https://www.behance.net/andrejsharapov" target="blank") Behance
+      - var x = 4;
+        div.widget
+          h5 Heading
+          ul
+            - for (var i=1; i<=x; i++) {
+            li Text
+            - }
+      - var x = 4;
+        div.widget
+          h5 Heading
+          ul
+            - for (var i=1; i<=x; i++) {
+            li Text
+            - }
+      - var x = 4;
+        div.widget
+          h5 CONTACTS
+          ul
+            - for (var i=1; i<=x; i++) {
+            li Text
+            - }
+    .copy
+      p &copy; 2019 with 
+        | 
+        span &#9829;
+        |  
+        a(href="https://andrejsharapov.github.io/" target="_blank") Andrej Sharapov
+      a(href="#one") Scroll top &#x2191;
