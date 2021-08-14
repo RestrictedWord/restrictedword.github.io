@@ -1,0 +1,454 @@
+colone = #191a1d
+coltwo = #1d1e22
+bg = #1d1e22
+heart = #df2359
+light = #ffffff
+bdr = #312d3c
+
+str-style
+  stroke-dasharray 700
+  stroke-dashoffset 1000
+  animation dash 4s linear forwards
+        
+*
+::before
+::after
+  box-sizing border-box
+
+body
+  margin 0
+  padding 0 4px
+  height 100vh
+  overflow hidden
+  line-height 1.5
+  font-family 'Inconsolata', sans-serif
+  font-size 62.5%
+  color light
+  background-color bg
+
+::-webkit-scrollbar
+  width 8px
+  height 6px
+
+::-webkit-scrollbar-track
+  background-color bg
+
+::-webkit-scrollbar-thumb
+  border-radius 1em
+  background-color bdr
+  
+  &:hover
+    background-color heart
+
+a
+  text-decoration none
+  color light
+  
+  &:hover
+  &.leadlink
+    color heart
+
+h1
+h2
+header a
+  text-transform uppercase
+
+.smooth
+  margin 0 auto
+  padding 0 4px
+  padding-left 8px
+  height 100%
+  overflow-x hidden
+  overflow-y scroll
+  scroll-behavior smooth
+
+header
+footer
+  position relative
+  padding 2em 3em
+  display flex
+  align-items center
+  font-size 1rem
+
+header
+  position -webkit-sticky
+  position sticky
+  top 0
+  z-index 2
+  height 10vh
+  background-color bg
+
+  h3
+    position relative
+    margin 0
+    font-family 'Montserrat', sans-serif
+    font-size 2rem
+    color heart
+
+  ul
+    list-style-type none
+    padding 0
+    margin 1em 0
+    display flex
+    width 100%
+    justify-content flex-end
+    align-items center
+    
+    li
+      position relative
+      margin 0 1em
+      transition all 0.2s linear
+      
+      a
+        font-family 'Montserrat', sans-serif
+        font-weight 500
+        color light
+      
+      &::before        
+        position absolute
+        content ''
+        top calc(100% + 4px)
+        left 0
+        width 20px
+        height 2px
+        background-color light
+        transform-origin 0 100%
+        transform rotate(-5deg)
+        transition all 0.2s ease-out
+      
+      &:hover
+        &::before
+          width 100%
+          background-color heart
+
+.grid
+  display grid
+  grid-gap 2em
+  &.g_two
+    grid-template-columns 1fr minmax(300px, auto)
+  
+.flex
+  display flex
+  width 100%
+  align-items center
+
+  &.column
+    flex-flow column wrap
+    justify-content space-between
+
+ &.jcsb
+   justify-content space-between
+
+progress
+  position relative
+  margin 1em 0
+  
+  &[value]
+    -webkit-appearance none
+    appearance none
+    width 100%
+    max-width 360px
+    height 1px
+    
+  &::-webkit-progress-bar
+    background-color darken(light, 60%)
+    border-radius 1em
+    
+  &::-webkit-progress-value
+    position absolute
+    top -2px
+    left 0
+    background-color heart
+    border-radius 1em
+    height 5px
+
+section
+  position relative
+  display flex
+  min-height 100vh
+  padding 2em 3em
+  flex-direction column
+  justify-content center
+  align-items center
+  font-size 1rem
+  border-radius 1em
+  background-color colone
+
+  &:nth-child(odd)
+    background-color coltwo
+    
+  &#one
+    background-image url(https://andrejsharapov.github.io/iogo/src/header.jpg)
+    background-position center
+    background-size cover
+    color light
+    
+    h1
+      visibility hidden
+      opacity 0
+      font-family 'Montserrat', sans-serif
+      font-size 0
+      
+    .title
+      min-width 350px
+      max-height 80px
+      font-family 'Montserrat', sans-serif
+      font-size 3rem
+      font-weight 600
+
+      text
+        letter-spacing 2px
+        fill none
+        stroke light
+        stroke-width 2
+        stroke-linecap round
+        @extend str-style
+        
+      path
+        stroke light
+        stroke-width 4
+        @extend str-style
+        animation-delay 1s
+
+    &::after
+      position absolute
+      content ''
+      top 0
+      right 0
+      bottom 0
+      left 0
+      background-image linear-gradient(
+        0deg,
+        rgba(bg, 0.3),
+        bg
+      )
+
+  &#two
+  &#four
+    .blocks
+      padding 2em 0
+      display flex
+      width 100%
+      flex-flow row wrap
+      justify-content space-around
+      align-items center
+      
+      .block
+        margin 0 auto
+        display flex
+        width 23%
+        height 150px
+        justify-content center
+        align-items center
+        border 3px solid bdr
+        border-radius 1em
+        background-color colone
+        transition all 0.2s linear
+        
+        &:hover
+          transform translateY(-10px)
+          background-color bdr
+
+  &#four
+    .blocks
+      .block
+        padding 0.25em 1em
+        width 49%
+        height auto
+        flex-flow column wrap
+        background-color colone
+        
+    .dots
+      margin-top 2em
+      display flex
+      width 25%
+      align-items center
+      justify-content space-around
+
+    .dot
+      width 20px
+      height 20px
+      cursor pointer
+      border 2px solid bdr
+      border-radius 50%
+      background-color colone
+      
+      &:hover
+        transform scale(1.1)
+        background-color bdr
+  h2
+    font-family 'Montserrat', sans-serif
+    span
+      color heart
+
+.content
+  position relative
+  z-index 1
+  display flex
+  align-items center
+  
+  p.lead
+    font-size 1.25rem
+  
+  .blur
+    position relative
+    overflow hidden
+    margin auto
+    margin-left 2em
+    padding 1em
+    width 100%
+    height 350px
+    border-radius 0.35em
+    
+    &::before
+      position absolute
+      content ''
+      top -25%
+      left -25%
+      width 150%
+      height 150%
+      box-shadow: inset 0 0 0 600px rgba(light, 0.3)
+      filter blur(10px)
+
+form
+  position relative
+  z-index 3
+  padding 1em
+  display flex
+  width 100%
+  height 100%
+  flex-direction column
+  align-items center
+  justify-content space-around
+  border 2px solid light
+  border-radius 0.35em
+  
+  img
+    width 64px
+    height 64px
+  
+  input
+    margin-bottom 1em
+    min-height 3em
+    font-size 1em
+    color light
+    border 0
+    border-bottom: 2px solid light
+    background none
+      
+    &::placeholder
+      position relative
+      top 0
+      color inherit
+      transition all 0.2s linear
+    
+    &:focus
+      outline none
+      &::placeholder
+        top -1.25em
+        font-size 0.825rem
+      
+  .button
+    position relative
+    margin-top 1em
+    padding 1em 3em
+    text-transform uppercase
+    display block
+    font-size 1rem
+    cursor pointer
+    color light
+    border 0
+    border-radius 0.35em
+    background-color heart
+      
+footer
+  padding-bottom 1em
+  width 100%
+  min-height 35vh
+  flex-direction column
+  justify-content space-around
+  background-color colone
+  
+  h3
+    position relative
+    font-family 'Montserrat', sans-serif
+
+    &::before        
+        position absolute
+        content ''
+        top calc(100% + 4px)
+        left 0
+        width 20px
+        height 2px
+        background-color heart
+        transform-origin 0 100%
+        transform rotate(-5deg)
+        transition all 0.2s ease-out
+
+  h5
+    text-transform uppercase
+    font-family 'Montserrat', sans-serif
+    
+    &.follow
+      color heart
+
+  ul
+    list-style-type none
+    margin 0
+    padding 0
+    
+    li
+      line-height 1.5
+      transition transform 200ms ease-in
+      will-change transform
+      
+      &:hover
+        transform translateX(5px)
+
+  .widgets
+  .copy
+    display flex
+    width 100%
+    justify-content space-between
+    align-items center
+
+    .widget
+        display flex
+        flex-direction column
+        align-items center       
+
+  .copy
+    margin-top 1em
+    border-top 2px solid bdr
+    
+    p
+      margin 0.75em 0 0
+
+    span
+      position relative
+      display inline-block
+      color heart
+      animation hearts 0.6s cubic-bezier(0.18, 0.89, 0.29, 1.05) infinite
+
+@keyframes hearts
+  50%
+    transform scale(1.4)
+
+@keyframes dash
+  90%
+    stroke-dashoffset 0
+  100%
+    stroke-dashoffset 0
+    fill light
+
+// for demo
+
+@media (max-width: 991px)
+  .blur
+    display none
+  .content
+    text-align center
+    
+    h1
+      &::before
+        display none
