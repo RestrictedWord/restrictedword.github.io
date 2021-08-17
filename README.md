@@ -1,0 +1,1 @@
+# restrictedword.github.io
