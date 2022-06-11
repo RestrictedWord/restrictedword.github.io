@@ -650,7 +650,9 @@ img#logo.logo,
 #play>.play-content {
 	display: unset;
 }
-
+.join-using-link{
+	display: none !important;
+}
 #play>.play-content>.select-region {
 	position: absolute;
 	top: 0.875rem;
