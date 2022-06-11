@@ -1,0 +1,10 @@
+/* Hidden */
+.background>.pattern-bg,
+.background>.bg-radial {
+	visibility: hidden;
+}
+/* Background */
+#app>.interface>.background {
+	background: var(--img-1);
+	background-size: cover;
+}

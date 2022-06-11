@@ -1,0 +1,22 @@
+#view {
+	background: var(--img-1);
+	background-size: cover;
+}
+.top-bar>.close {
+	background: var(--clr-primary-1);
+	border-radius: var(--sz-1);
+	margin-top: var(--sz-2);
+	margin-right: var(--sz-2);
+	height: var(--sz-4);
+	width: var(--sz-4);
+}
+
+.top-bar>.close>.svg-icon {
+	transform: var(--tnsfrm-1);
+}
+.background>.container {
+	background: var(--clrA-primary-1);
+	backdrop-filter: var(--blr-1);
+	border: var(--szB-1) var(--type-1) var(--clr-primary-2);
+	transition: all ease var(--tSec-1);
+} 
