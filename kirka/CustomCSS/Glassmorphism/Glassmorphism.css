@@ -4,4 +4,7 @@
    @version 1.0.0
    @description Kirka CSS but better
 ------------------- */
-@import url("https://restrictedword.github.io/kirka/CustomCSS/Glassmorphism/src/Root.css"); 
+@import url("https://restrictedword.github.io/kirka/CustomCSS/Glassmorphism/src/Root.css");
+
+/* Temp */
+@import url("https://restrictedword.github.io/kirka/CustomCSS/Glassmorphism/src.css");
