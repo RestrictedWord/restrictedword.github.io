@@ -24,15 +24,9 @@
 	font-size: 1rem;
 }
 
-.right-icons>div>img,svg{
-	display: none;
-}
-
-.svg-icon--news,
-.svg-icon--cube-edit,
-.svg-icon--gamepad,
-.svg-icon--store,
-.svg-icon--castle2 {
+.wrapper>svg,
+.right-icons>div>img,
+.settings-and-socicons>:nth-child(1){
 	display: none;
 }
 
