@@ -1,0 +1,54 @@
+.right-icons .icon-btn, .inventory-card  {
+    width: 130px !important;
+}
+
+.right-icons svg, .gun-img {
+    display: none;
+}
+
+.right-icons .wrapper {
+    transform: none !important;
+    height: 13px;
+}
+
+.right-icons {
+    flex-direction: row !important;
+}
+
+.right-icons {
+    right: 32% !important;
+    top: 88.67% !important;
+    z-index: 9;
+}
+
+.icon-btn,
+.inventory-card {
+    border-top: 0px solid #0000 !important;
+    background-color: #db272700 !important;
+    border-bottom: solid 0px #0000 !important;
+}
+
+.svg-icon--news,
+.svg-icon--cube-edit,
+.svg-icon--gamepad,
+.svg-icon--store,
+.svg-icon--castle2{
+    display: none;
+}
+
+.left-icons,
+.left-icons > div {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.left-icons .icon-btn {
+    background: #c4595900 !important;
+    border-top: 2px solid #fff0 !important;
+    border-bottom: rgba(176, 35, 35, 0) !important;
+}
+
+.left-icons {
+    left: 30% !important;
+    top: 89% !important;
+}
