@@ -11,7 +11,7 @@
 	flex-direction: row;
 }
 
-.interface>.right-icons>div {
+.interface>.right-icons>div{
 	display: flex;
 	justify-content: center;
 	width: 6rem;
