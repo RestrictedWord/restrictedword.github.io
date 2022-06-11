@@ -1,0 +1,197 @@
+.container-games>.chat-cont {
+	visibility: hidden;
+	margin-top: 1.2rem;
+	margin-right: 0.5rem;
+	width: 2.1rem;
+	height: 0.875rem;
+}
+
+.container-games>.chat-cont:before {
+	content: "CHAT";
+	position: absolute;
+	font-size: 0.875rem;
+	visibility: visible;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	bottom: 0;
+	background: #2b2c30;
+	padding: 0.25rem;
+	border-radius: 0.25rem;
+	transition: all ease 0.8s;
+}
+
+.container-games>.chat-cont:hover:before {
+	content: "";
+	background: unset;
+}
+
+.container-games>.chat-cont:hover {
+	visibility: visible;
+	width: unset;
+	height: unset;
+}
+
+.message>.text>button {
+	visibility: hidden;
+}
+
+.chat-cont>.chat>.messages {
+	border-radius: 0.5rem;
+	background: #24262c !important;
+}
+
+.chat-cont>.chat-head>.rules>.rules-icon {
+	display: none;
+}
+
+.chat-cont>.chat>.input-wrapper>.input {
+	background: #24262c;
+}
+
+.preview.text-2>img {
+	border-radius: 0.5rem;
+}
+
+.img-bg>.head>.map-name {
+	color: white;
+	background: #2b2c30;
+	border-radius: 0.25rem;
+	padding: 0.25rem;
+	width: 19.35rem;
+}
+
+.img-bg>.head {
+	margin: 0.3rem;
+}
+
+.preview.text-2>.img-bg {
+	border-radius: 0.5rem;
+	align-items: center;
+	padding: unset;
+	width: 20rem;
+
+}
+
+.container-games>.preview.text-2 {
+	height: 27.6rem;
+	margin: 3rem 0.5rem 0.5rem 0.5rem;
+
+}
+
+.img-bg>.bottom {
+	background: #24262c;
+	padding: 0.25rem;
+	border-radius: 0.5rem;
+	width: 19.35rem;
+	margin: 0.25rem 0.25rem 0.3rem 0.25rem
+}
+
+.img-bg>.bottom>.bottom-right>.online {
+	background: #2b2c30;
+	border-radius: 0.25rem;
+	padding: 0.25rem;
+}
+
+.img-bg>.bottom>.bottom-right>.description {
+	margin-top: 0.25rem;
+	background: #2b2c30;
+	border-radius: 0.25rem;
+	padding: 0.25rem;
+}
+
+.img-bg>.bottom>.button {
+	--top: unset !important;
+	--bottom: unset !important;
+	-webkit-text-stroke: unset;
+	background-color: #2b2c30 !important;
+	box-shadow: unset;
+	border-radius: 0.5rem;
+	margin: 0.6rem 0.75rem 0.6rem 0.6rem;
+}
+
+.img-bg>.bottom>.button:hover {
+	filter: brightness(1.2);
+}
+
+.img-bg>.bottom>.button:after {
+	all: unset;
+}
+
+.img-bg>.bottom>.button>.triangle {
+	display: none;
+}
+
+.container-games>.list-cont {
+	margin-top: 0.6875rem;
+}
+
+.container-games>.list-cont>.tabs {
+	background: unset;
+	border-bottom: 2px solid #3c3d41;
+}
+
+.list-cont>.tabs>.tab {
+	background: unset;
+	border-left: unset;
+	border-right: unset;
+}
+
+.list-cont>.tabs>.tab:hover {
+	color: white;
+	border-bottom: 2px solid white;
+}
+
+.list-cont>.tabs>.active {
+	color: white;
+	border-bottom: 2px solid white;
+}
+
+.list>.server {
+	position: relative;
+	background-color: #24262c;
+}
+
+.server>.right>.online {
+	background: #2b2c30;
+	border-radius: 0.25rem;
+	padding: 0.15rem 0.25rem 0.15rem 0.25rem;
+	margin: 0.25rem;
+}
+
+.server>.right>.button {
+	--top: unset !important;
+	--bottom: unset !important;
+	-webkit-text-stroke: unset;
+	position: absolute;
+	visibility: hidden;
+	background-color: unset !important;
+	box-shadow: unset;
+	transform: skew(0deg);
+	height: 100%;
+	width: 100%;
+	left: 0;
+}
+
+.server>.right>.button:before {
+	content: "";
+	position: absolute;
+	visibility: visible;
+	font-size: 1.2rem;
+	height: 100%;
+	width: 100%;
+	padding-top: 0.575rem;
+}
+
+.server>.right>.button:hover:before {
+	content: "join";
+	background: #24262c;
+}
+
+.server>.right>.button:after {
+	all: unset;
+}
+
+.server>.right>.button>.text {
+	transform: skew(0deg);
+}

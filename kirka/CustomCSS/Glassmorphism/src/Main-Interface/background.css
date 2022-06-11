@@ -4,7 +4,39 @@
 	visibility: hidden;
 }
 /* Background */
-#app>.interface>.background {
+.interface>.background,#view {
 	background: var(--img-1);
 	background-size: cover;
+}
+.view>.background {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	background-color: unset;
+	padding: unset;
+	border-radius: unset;
+	transition: all ease 0.8s;
+}
+
+.view>.background:before {
+	content: var(--content-1);
+	position: absolute;
+	font-size: 0.875rem;
+	background: #2b2c30;
+	padding: 0.4rem 0.25rem 0.25rem 0.25rem;
+	border-radius: 0.25rem;
+	z-index: 1;
+	bottom: -.875rem;
+	border: 1px solid #3c3d41;
+	filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
+}
+.background>.container {
+	background: #212124d1;
+	backdrop-filter: blur(20px);
+	border: 1px solid #3c3d41;
+	transition: all ease 0.8s;
+}
+
+#view>div>div>div.content {
+	transition: all ease 0.8s;
 }

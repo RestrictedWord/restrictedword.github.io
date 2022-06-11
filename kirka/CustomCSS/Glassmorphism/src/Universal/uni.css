@@ -9,3 +9,16 @@
 	box-shadow: unset !important;
   -webkit-text-stroke: unset !important;
 }
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+	border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+	background: #131417;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #333438;
+}

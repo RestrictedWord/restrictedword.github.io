@@ -42,3 +42,27 @@
 	border: 1px solid #3c3d41;
 	filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
 }
+.container>.top-bar {
+	background: unset;
+	box-shadow: unset;
+}
+
+.left>.name-page {
+	background: #2b2c30;
+	box-shadow: unset;
+	border-radius: 0.25rem;
+	margin-left: 0.5rem;
+	margin-top: 0.5rem
+}
+
+.left>.home {
+	background: #2b2c30;
+	border: unset;
+	border-radius: 0.25rem;
+	margin-left: 0.5rem;
+	margin-top: 0.5rem;
+}
+
+.left>.text-2 {
+	text-shadow: unset;
+}

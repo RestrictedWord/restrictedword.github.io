@@ -1,0 +1,396 @@
+.subject>.rar-skin {
+	height: 5rem;
+	border-radius: 0.25rem;
+	transform: translateX(-0.2rem);
+	z-index: 1;
+}
+
+.subject>.hover-bg {
+	background: unset;
+	backdrop-filter: blur(20px);
+}
+
+.subject>.hover-btns-group>.button {
+	--top: unset !important;
+	--bottom: unset !important;
+	-webkit-text-stroke: unset;
+	background: #2b2c30 !important;
+	border-radius: 0.25rem;
+	padding: 0.25rem;
+	border: 1px solid #3c3d41;
+	filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
+}
+
+.subject>.hover-btns-group>.button>.triangle {
+	display: none;
+}
+
+.subject>.hover-btns-group>.button:after {
+	all: unset;
+}
+
+.hover-btns-group>.item-name {
+	left: unset;
+	font-size: 0.875rem;
+	background: #393a3f;
+	padding: 0rem 1.25rem 0rem 1.25rem;
+	border-radius: 0.5rem;
+}
+
+.content>.subjects {
+	background: #24262c;
+	border: 0.25rem solid #24262c;
+	border-bottom: 0.55rem solid #24262c;
+	border-top: 0.55rem solid #24262c;
+	height: 31rem;
+	width: 54rem;
+	border-radius: 0.5rem;
+	margin-left: 0.85rem;
+	margin-top: 0.3rem
+}
+
+.content>.subjects>div:nth-child(1),
+.content>.subjects>div:nth-child(2),
+.content>.subjects>div:nth-child(3),
+.content>.subjects>div:nth-child(4),
+.content>.subjects>div:nth-child(5) {
+	margin-top: 0.25rem
+}
+
+
+.content>.tab-bar {
+	background: unset;
+	border-bottom: 2px solid #3c3d41
+}
+
+.content>.inventory {
+	width: 90rem;
+	height: unset;
+}
+
+
+.tab-bar>.tab {
+	font-weight: unset;
+	transform: unset;
+	background: unset;
+	color: #98989a;
+}
+
+.tab-bar>.tab:hover {
+	color: white;
+	border-bottom: 2px solid white;
+	background: unset
+}
+
+.tab-bar>.active {
+	color: white;
+	border-bottom: 2px solid white;
+}
+
+.tab-bar>.tab>.name {
+	transform: unset;
+}
+
+.subjects>.subject {
+	background: #292b31;
+	border-radius: 0.25rem;
+	width: 10rem;
+}
+
+.subject>.selected {
+	top: 0.25rem;
+	right: 0.25rem;
+}
+
+.inventory>.avatar {
+	background: unset;
+}
+
+.avatar>.player-lobby {
+	margin-left: -12rem
+}
+
+.avatar>.avatar-head {
+	position: absolute;
+	margin: unset;
+	transform: translate(0.5rem, 0.5rem)
+}
+
+.avatar>.avatar-head>.level {
+	padding: 0.2rem 0.45rem;
+	margin-right: 0.5rem;
+	background: #292b31;
+	font-size: 1.5rem;
+	min-width: unset;
+	color: white;
+}
+
+.avatar>.avatar-head>.nickname {
+	font-size: 1.5rem;
+}
+
+.avatar>.avatar-head>.nickname img {
+	margin-left: 0.25rem
+}
+
+.avatar>.bottom {
+	background: #24262c;
+	border-radius: 0.5rem;
+	width: 33.95rem;
+	padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+	bottom: 0;
+	left: 0.65rem;
+	margin-bottom: 0.5rem
+}
+
+.avatar>.bottom>.gun {
+	border-radius: 0.5rem;
+	background: #292b31;
+	margin: 0.25rem;
+}
+
+.avatar>.bottom>.gun>.name-gun {
+	font-size: 1.2rem;
+	margin-top: unset;
+}
+
+.bottom-subj>.count {
+	bottom: 0.25rem;
+	right: 0.25rem;
+	border-radius: .25rem;
+	background: #393a3f;
+	padding: .2rem .5rem;
+}
+.hover-btns-group>.item-name {
+	left: unset;
+	font-size: 0.875rem;
+	background: #393a3f;
+	padding: 0rem 1.25rem 0rem 1.25rem;
+	border-radius: 0.5rem;
+}
+
+.content>.subjects {
+	background: #24262c;
+	border: 0.25rem solid #24262c;
+	border-bottom: 0.55rem solid #24262c;
+	border-top: 0.55rem solid #24262c;
+	height: 31rem;
+	width: 54rem;
+	border-radius: 0.5rem;
+	margin-left: 0.85rem;
+	margin-top: 0.3rem
+}
+
+.content>.subjects>div:nth-child(1),
+.content>.subjects>div:nth-child(2),
+.content>.subjects>div:nth-child(3),
+.content>.subjects>div:nth-child(4),
+.content>.subjects>div:nth-child(5) {
+	margin-top: 0.25rem
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+	border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+	background: #131417;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #333438;
+}
+
+.content>.tab-bar {
+	background: unset;
+	border-bottom: 2px solid #3c3d41
+}
+
+.content>.inventory {
+	width: 90rem;
+	height: unset;
+}
+
+
+.tab-bar>.tab {
+	font-weight: unset;
+	transform: unset;
+	background: unset;
+	color: #98989a;
+}
+
+.tab-bar>.tab:hover {
+	color: white;
+	border-bottom: 2px solid white;
+	background: unset
+}
+
+.tab-bar>.active {
+	color: white;
+	border-bottom: 2px solid white;
+}
+
+.tab-bar>.tab>.name {
+	transform: unset;
+}
+
+.subjects>.subject {
+	background: #292b31;
+	border-radius: 0.25rem;
+	width: 10rem;
+}
+
+.subject>.selected {
+	top: 0.25rem;
+	right: 0.25rem;
+}
+
+.inventory>.avatar {
+	background: unset;
+}
+
+.avatar>.player-lobby {
+	margin-left: -12rem
+}
+
+.avatar>.avatar-head {
+	position: absolute;
+	margin: unset;
+	transform: translate(0.5rem, 0.5rem)
+}
+
+.avatar>.avatar-head>.level {
+	padding: 0.2rem 0.45rem;
+	margin-right: 0.5rem;
+	background: #292b31;
+	font-size: 1.5rem;
+	min-width: unset;
+	color: white;
+}
+
+.avatar>.avatar-head>.nickname {
+	font-size: 1.5rem;
+}
+
+.avatar>.avatar-head>.nickname img {
+	margin-left: 0.25rem
+}
+
+.avatar>.bottom {
+	background: #24262c;
+	border-radius: 0.5rem;
+	width: 33.95rem;
+	padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+	bottom: 0;
+	left: 0.65rem;
+	margin-bottom: 0.5rem
+}
+
+.avatar>.bottom>.gun {
+	border-radius: 0.5rem;
+	background: #292b31;
+	margin: 0.25rem;
+}
+
+.avatar>.bottom>.gun>.name-gun {
+	font-size: 1.2rem;
+	margin-top: unset;
+}
+
+.bottom-subj>.count {
+	bottom: 0.25rem;
+	right: 0.25rem;
+	border-radius: .25rem;
+	background: #393a3f;
+	padding: .2rem .5rem;
+}
+/* Chest Container */
+.vm--container {
+	display: flex;
+}
+
+#view>div>div>div.content>div>div.vm--container>div.vm--modal>div>div {
+	position: absolute;
+	top: 1rem;
+  border: 1px solid #3c3d41;
+  filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
+}
+
+.percents {
+	background: #2b2c308a !important;
+	backdrop-filter: blur(3px);
+	padding: 0.5rem 0.5rem 0.5rem 1rem;
+	border-radius: 0.5rem;
+  z-index: 10;
+}
+
+.percent>.circle-percent {
+	position: absolute;
+	left: calc(0.1rem - 0.35rem);
+	height: 1.5rem;
+	width: 0.5rem;
+	border-radius: 0.15rem
+}
+
+#view>div>div>div.content>div>div.vm--container>div.vm--modal>div>div {
+	background: #212124d1;
+	backdrop-filter: blur(20px);
+}
+
+.bottom>.chests-select-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background: #292b31;
+    border-radius: 1rem;
+    width: 10rem;
+    transform: scale(0.85);
+    margin: unset;
+}
+.chest-select>.number{
+     border-radius: 0.25rem;
+    background: #393a3f;
+    padding: 0.1rem 0.4rem;
+  filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
+}
+
+.chest-container>.label-name{
+  top: 0.5rem;
+  left: 0.5rem;
+  text-transform: uppercase;
+  background: #2b2c308a;
+	backdrop-filter: blur(3px);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+  z-index: 10;
+}
+.bottom>button,
+.circle-bg>button{
+  --top: unset!important;
+  --bottom: unset!important;
+  background: #2b2c308a!important;
+  border-radius: 1rem!important;
+  transform: unset !important;
+}
+.bottom>button>.text,
+.circle-bg>button>.text{
+  transform: unset !important;
+}
+.bottom>button:after,
+.bottom>button:before,
+.circle-bg>button:after,
+.circle-bg>button:before{
+  all: unset !important;
+}
+#view > div > div > div.content > div > div.vm--container > div.vm--modal > div > div > div > div.chest-wrapper{
+      border-bottom: 0.4rem solid #ffffff2e;
+}
+.vm--modal>.wrapper-modal,
+.vm--container>.vm--overlay{
+  background-color: unset;
+}

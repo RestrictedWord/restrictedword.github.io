@@ -5,8 +5,10 @@
 @import url("https://restrictedword.github.io/kirka/CustomCSS/Glassmorphism/src/Main-Interface/top-nav.css");
 @import url("https://restrictedword.github.io/kirka/CustomCSS/Glassmorphism/src/Main-Interface/bottom-nav.css");
 /* Main Interface / Containers */
+@import url("https://restrictedword.github.io/kirka/CustomCSS/Glassmorphism/src/Main-Interface/containers/servers.css");
 @import url("https://restrictedword.github.io/kirka/CustomCSS/Glassmorphism/src/Main-Interface/containers/inventory.css");
 @import url("https://restrictedword.github.io/kirka/CustomCSS/Glassmorphism/src/Main-Interface/containers/modal.css");
+@import url("https://restrictedword.github.io/kirka/CustomCSS/Glassmorphism/src/Main-Interface/containers/friends.css");
 /* Loading */
 @import url("https://restrictedword.github.io/kirka/CustomCSS/Glassmorphism/src/Loading-Screen/loading.css");
 /* Game Interface */

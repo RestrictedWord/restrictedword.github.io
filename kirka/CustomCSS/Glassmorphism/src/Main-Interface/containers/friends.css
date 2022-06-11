@@ -1,0 +1,139 @@
+/* Friends */
+.content>.friends {
+	width: 100%;
+	height: 50rem;
+}
+
+.friends>.content {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	margin-top: 0.5rem;
+	width: 45rem;
+}
+
+.friends>.content>.tabs {
+	position: fixed;
+	background: unset;
+	width: 44rem;
+	border-bottom: 2px solid #3c3d41;
+	box-shadow: unset;
+	color: #98989a;
+	z-index: 1;
+}
+
+.friends>.content>.tabs>.limit {
+	background: #2b2c30;
+	border-radius: 0.25rem;
+	border-left: unset;
+	margin-bottom: 0.5rem;
+}
+
+.friends>.content>.tabs>.left>.active-tab {
+	color: white;
+	background: unset;
+	border-right: unset;
+	border-left: unset;
+	border-bottom: 2px solid white
+}
+
+.friends>.content>.tabs>.left>.active-tab:hover,
+.friends>.content>.tabs>.left>.tab:hover {
+	color: white;
+	border-bottom: 2px solid white;
+}
+
+.content>.allo {
+	height: unset;
+}
+
+.allo>.list,
+.allo>.requests {
+	position: absolute;
+	width: 44rem;
+	height: 44rem;
+	left: 0;
+	bottom: 0;
+}
+
+.list>.friend,
+.requests>.friend {
+	padding: 0.25rem;
+	width: 43rem;
+	background: #24262c;
+}
+
+.list>.friend:hover,
+.requests>.friend:hover {
+	background: #272a31;
+}
+
+.friend-left>.level-cont>.level-label {
+	display: none;
+}
+
+.friend-left>.level-cont {
+	background: #2b2c30;
+	border-radius: 0.25rem;
+	border: unset;
+}
+
+.friend-desc>.nickname img {
+	margin-left: 0.25rem;
+}
+
+.friend-right>.add-delete>.delete {
+	background: #2b2c30;
+	border-radius: 0.25rem;
+	border: unset;
+	width: 2.5rem;
+	margin-left: 0.25rem;
+}
+
+.friend-right>.add-delete>.add {
+	background: #2b2c30;
+	border-radius: 0.25rem;
+	border: unset;
+	width: 3.45rem
+}
+
+.friend-right>.add-delete>.add:hover {
+	background: #11ff1126;
+}
+
+.friend-right>.add-delete>.delete>svg {
+	transform: scale(0.75);
+	transition: all ease 0.25s;
+}
+
+.friend-right>.add-delete>.delete:hover {
+	background: #e24f4f5c;
+}
+
+.friend-right>.add-delete>.delete>svg:hover {
+	transform: rotate(15deg) scale(0.75);
+}
+
+.friends>.add-friends {
+	position: absolute;
+	background: unset;
+	height: 4rem;
+	visibility: hidden;
+}
+
+.add-friends>.head-text {
+	display: none;
+}
+
+.add-friends>.input {
+	margin-top: 0.5rem;
+	padding: 0 0.5rem;
+}
+
+.add-friends>.input>.wrapper-input>.label {
+	display: none;
+}
+
+#nprogress .bar {
+	background: white
+}
