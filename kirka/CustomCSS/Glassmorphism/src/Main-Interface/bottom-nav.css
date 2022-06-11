@@ -3,11 +3,12 @@
 	bottom: 0;
 	width: 60rem;
 	height: 5rem;
-	z-index: 10;
+	z-index: 2;
 	margin-bottom: 0.5rem;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	flex-direction: row;
 }
 
 .interface>.right-icons>div {
@@ -23,22 +24,8 @@
 	font-size: 1rem;
 }
 
-.interface>.right-icons>:nth-child(2) {
-	margin-bottom: 0.26rem;
-}
-
-.interface>.right-icons svg,
-.gun-img {
+.right-icons>div>img,svg{
 	display: none;
-}
-
-.interface>.right-icons .wrapper {
-	transform: none;
-	height: 13px;
-}
-
-.right-icons {
-	flex-direction: row !important;
 }
 
 .svg-icon--news,
@@ -49,16 +36,11 @@
 	display: none;
 }
 
-.left-icons,
-.left-icons>div {
-	display: flex !important;
-	flex-direction: row !important;
-}
-
-.left-icons .icon-btn {
-	background: #c4595900 !important;
-	border-top: 2px solid #fff0 !important;
-	border-bottom: rgba(176, 35, 35, 0) !important;
+.interface>.left-icons>div>.icon-btn,
+.interface>.left-icons>div{
+	background: unset;
+	border-top: unset !important;
+	border-bottom: unset;
 }
 
 .left-icons {
@@ -68,4 +50,19 @@
 
 .settings-and-socicons>:nth-child(1) {
 	display: none
+}
+.interface>.left-icons,
+.interface>.left-icons>div{
+	display: flex;
+	flex-direction: row;
+	z-index: 10;
+}
+.interface>.left-icons>div>.icon-btn>.wrapper,
+.interface>.left-icons>div>.icon-btn:hover>.wrapper,
+.interface>.left-icons>div:hover>.wrapper{
+	transform: unset;
+	border: unset;
+}
+.icon-btn>.wrapper{
+	margin: unset;
 }
