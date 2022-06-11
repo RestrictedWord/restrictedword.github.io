@@ -1,33 +1,44 @@
-.right-icons .icon-btn,
-.inventory-card {
-	width: 130px !important;
+.interface>.right-icons {
+	right: unset;
+	bottom: 0;
+	width: 60rem;
+	height: 5rem;
+	z-index: 10;
+	margin-bottom: 0.5rem;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 
-.right-icons svg,
+.interface>.right-icons>div {
+	display: flex;
+	justify-content: center;
+	width: 6rem;
+	height: 2rem;
+	margin: unset;
+	padding: unset;
+	border-top: unset;
+	background-color: unset;
+	border-bottom: unset;
+	font-size: 1rem;
+}
+
+.interface>.right-icons>:nth-child(2) {
+	margin-bottom: 0.26rem;
+}
+
+.interface>.right-icons svg,
 .gun-img {
 	display: none;
 }
 
-.right-icons .wrapper {
-	transform: none !important;
+.interface>.right-icons .wrapper {
+	transform: none;
 	height: 13px;
 }
 
 .right-icons {
 	flex-direction: row !important;
-}
-
-.right-icons {
-	right: 32% !important;
-	top: 88.67% !important;
-	z-index: 9;
-}
-
-.icon-btn,
-.inventory-card {
-	border-top: 0px solid #0000 !important;
-	background-color: #db272700 !important;
-	border-bottom: solid 0px #0000 !important;
 }
 
 .svg-icon--news,
