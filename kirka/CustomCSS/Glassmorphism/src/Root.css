@@ -16,8 +16,8 @@
 :root{
     --clr-primary-1: hsl(228, 5%, 18%);
     --clr-primary-2: hsl(228, 4%, 25%);
-    --clr-primary-3: #000;
-    --clr-primary-4: #000;
+    --clr-primary-3: hsl(225, 10%, 16%);
+    --clr-primary-4: hsl(225, 9%, 18%);
     --clrA-primary-1: hsla(240, 4%, 14%, 0.82);
     --clr-txt-1: hsl(0, 0%, 100%);
     --img-1: url("https://restrictedword.github.io/kirka/CustomCSS/Glassmorphism/src/img/blur-bg.png");  
