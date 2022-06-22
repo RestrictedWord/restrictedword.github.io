@@ -1,0 +1,200 @@
+@import url(https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+
+:root {
+    --bgcolor: linear-gradient(45deg, rgba(58, 65, 78, 1) 0%, rgba(29, 34, 44, 1) 100%);
+    --clan-clr: #af51e6;
+    --progress-clr: #ff8642;
+    --type-clr: #ffff00;
+    --value-clr: #fff;
+}
+
+body {
+    background: #1a1919;
+    font-family: Exo\ 2;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 1012px;
+    height: 638px;
+    border: 6px solid black;
+    overflow: hidden;
+}
+
+.profile-header {
+    width: calc(100% - 6.5rem);
+    height: 10rem;
+    margin-top: 0.8rem;
+}
+
+.profile-info {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.avatar {
+    width: 2.8rem;
+    height: 5.8rem;
+}
+
+.avatar img {
+    width: 100%;
+}
+
+.profile-info-right {
+    margin-left: 1.5rem;
+}
+
+.badges {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.badge {
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.badge img {
+    width: 100%;
+}
+
+.nickname {
+    color: white;
+    font-size: 2.65rem;
+    font-weight: bold;
+}
+
+.clan {
+    color: var(--clan-clr);
+    margin-left: 0.5rem;
+    font-weight: 600;
+}
+
+.progress {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    border: 6px solid black;
+}
+
+.progress-value {
+    position: absolute;
+    color: white;
+    font-family: bold;
+    font-size: 1.65rem;
+    z-index: 1;
+}
+.progress-percentage{
+    position: absolute;
+    color: white;
+    font-family: bold;
+    font-size: 1.65rem;
+    right: 1rem;
+    margin-top: 0.2rem;
+}
+.progress-bar {
+    position: absolute;
+    background: var(--progress-clr);
+    border-radius: 2rem;
+    height: 100%;
+    transition: width 1s linear;
+    left: 0;
+}
+
+.background {
+    position: absolute;
+    width: calc(100% + 9rem);
+    height: 100%;
+    z-index: -1;
+    top: -0.25rem;
+}
+
+.background img {
+    width: 100%;
+}
+
+.stats-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+.stats-content{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: rgba(0, 0, 0, 0.341);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 6rem;
+    margin-bottom: 1.5rem;
+}
+.stats{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.stat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 12.8rem;
+}
+.type{
+    color: var(--type-clr) 
+}
+.value{
+    color: var(--value-clr)
+}
+.profile-footer{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 4rem;
+    width: 100%;
+    border-top: 10px solid rgba(0, 0, 0, 0.341);;
+    bottom: 0;
+}
+.icon{
+    width: 4.5rem;
+    height: 4.5rem;
+}
+.icon img{
+    width: 100%;
+}
+.discord-name{
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
