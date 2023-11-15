@@ -1,0 +1,116 @@
+#loginmWnwWMN
+{
+    background: #868686;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 290px;
+    margin-top: -300px;
+    margin-left: -145px;
+    height: 600px;
+    z-index: 999;
+    display: none;
+    border: 4px solid #838383;
+    border-bottom: solid 4px #5f5f5f;
+    border-top: 4px solid #9d9d9d;
+}
+
+#login
+{
+	margin: 6px;
+	/* margin-right: 10px; */
+	/* background-color: rgba(255, 255, 255, 0.32); */
+	/* text-align: center; */
+	padding: 20px 20px;
+	border-radius: 2px;
+	/* border-bottom: 4px solid #7b7b7b; */
+	/* height: 260px; */
+	/* box-shadow: 0px 6px #00000061; */
+	margin: 0px auto;
+}
+
+#login #error
+{
+	padding:5px;
+	/* border-radius:5px; */
+	color: #ffffff;
+	border: 1px solid red;
+	background: #d24747;
+	margin-bottom:20px;
+	text-align:center;
+	font-size: 10px !important;
+	text-transform: uppercase;
+	display: none;
+	border-style: outset;
+}
+
+#login #loginLost
+{
+	text-align:center;
+	margin-top:20px;
+	font-size: 9px;
+	text-transform: uppercase;
+}
+
+#login input#loginName {
+    height: 63px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Pixeled';
+    color: #515151 !important;
+    background: #ffffff;
+    text-transform: uppercase;
+    border: 1px solid #b3b3b3;
+    border-style: inset;
+}
+
+#login input#loginPassword {
+    height: 63px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Pixeled';
+    color: #000 !important;
+    /* border-radius: 8px; */
+    border: 1px solid #b3b3b3;
+    border-style: inset;
+    /* border: 0; */
+    /* border-bottom: 8px solid #cacaca; */
+    background: #ffffff;
+    /* border-radius: 2px; */
+    /* box-shadow: rgb(0, 0, 0) 0px 6px 50px; */
+    margin-top:20px;
+    text-transform: uppercase;
+}
+
+#login div#rememberMe{
+	margin-top:7px;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
+#login input#rememberMe
+{
+	-ms-transform: scale(1.2); /* IE */
+	-moz-transform: scale(1.2); /* FF */
+	-webkit-transform: scale(1.2); /* Safari and Chrome */
+	-o-transform: scale(1.2); /* Opera */
+	transform: scale(1.2);
+	padding: 10px;
+}
+
+#login input#loginBtn {
+    width: 100%;
+    height: 74px;
+    line-height: 55px;
+    font-size: 16px;
+    margin: 0 auto;
+    margin-top: 18px;
+    display: block;
+    font-family: 'Pixeled';
+    border: 4px solid #00000008;
+    border-bottom: solid 4px #00000021;
+    border-top: 4px solid #ffffff2b;
+}
+

@@ -1,0 +1,73 @@
+.sparkling-modal-container {background: #fff; }
+
+.sparkling-modal-overlay {
+    background: rgb(0 0 0 / 64%);
+}
+
+.sparkling-modal-frame {
+    background: #fff;
+    border: 0px solid #000;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px;
+    -ms-box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px;
+    /* border-radius: 8px; */
+}
+
+.sparkling-modal-title {
+    background: #818181;
+    color: #fff;
+    position: relative;
+    min-height: 64px;
+}
+
+.sparkling-modal-title span {
+	font-size: 26px;
+	padding: 20px;
+	float: left;
+	line-height: 26px;
+	color: #f5f5f5;
+	/* display: none; */
+	text-transform: uppercase;
+}
+
+.sparkling-modal-close {
+    cursor: pointer;
+    height: 100%;
+    width: 75px;
+    position: absolute;
+    right: 0px;
+    background: #707070;
+}
+
+.sparkling-modal-close:hover {background: #626262;}
+
+.sparkling-modal-content {/* padding: 20px; */background: #424242;}
+
+.i-close {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: rotate(45deg);
+    font-weight: b;
+}
+
+.i-close-h {
+    position: relative;
+    height: 4px;
+    width: 22px;
+    background: #ffffff;
+    top: 50%;
+    left: 50%;
+    margin-left: -9px;
+}
+
+
+.i-close-v {
+    position: relative;
+    height: 22px;
+    width: 4px;
+    background: #ffffff;
+    top: 50%;
+    margin-top: -13px;
+    left: 50%;
+}

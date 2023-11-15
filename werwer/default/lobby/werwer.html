@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)https://werwer.io/?server=200 -->
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="canonical" href="https://werwer.io/" />
+    <title>werwer</title>
+    <!-- <meta name="description" content="werwer.io - Survive in a chaotic blocky world. Build a base, farm, loot and take other mwWnWNMs down."> -->
+    <meta name="description" content="werwer.io - Voxel" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:title" content="werwer" />
+    <!-- <meta property="og:description" content="werwer.io - Survive in a chaotic blocky world. Build a base, farm, loot and take other mwWnWNMs down." /> -->
+    <meta property="og:description" content="werwer.io - Voxel" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://werwer.io" />
+    <meta property="og:image" content="https://werwer.io/thumbnail-big.png" />
+    <meta property="og:image:width" content="979" />
+    <meta property="og:image:height" content="604" />
+    <meta property="og:site_name" content="werwer.io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@X1PdotCOM" />
+    <meta name="twitter:creator" content="@X1PdotCOM" />
+    <meta name="twitter:title" content="werwer.io" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="https://werwer.io/thumbnail-big.png" />
+
+    <script>
+      var wwAdCompleteCallback = function () {};
+      var wwShowVideoAdTime = 0;
+      var wwInVideoAd = false;
+      var wwIsOnline = true;
+      var $_SESSION = {};
+      var wwClientIp = "172.69.140.138";
+      $_SESSION["id"] = 22449;
+      $_SESSION["guest"] = 0;
+      $_SESSION["name"] = "Word";
+      $_SESSION["email"] = "restrictedwordofficial@gmail.com";
+      $_SESSION["spam"] = 1;
+      $_SESSION["createTime"] = 1699069409;
+      $_SESSION["mouseSensitivity"] = 1;
+      $_SESSION["aimSensitivity"] = 0.8;
+      $_SESSION["invertMouseY"] = 0;
+    </script>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://werwer.io/web/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://werwer.io/web/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://werwer.io/web/favicon-16x16.png"
+    />
+    <link rel="manifest" href="https://werwer.io/web/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="https://werwer.io/web/safari-pinned-tab.svg"
+      color="#9c6f4e"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link href="css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="jquery.modalLink.css" />
+    <link rel="stylesheet" href="all.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script>
+      //Character
+      var homeCamera, homeWWNMmw, homeRenderer;
+      var mwWnWNM;
+      var WNnwmM;
+      var extraRunningAnimation = false;
+
+      function resizeCharacter() {
+        var wrap = document.getElementById("character");
+        var wrapWidth = wrap.offsetWidth - 10;
+        var wrapHeight = wrap.offsetHeight - 10;
+
+        var homeHidden = false;
+        if (wrap.offsetWidth == 0) {
+          //temporary show home then hide it mwNMnW back when we're done, just to get the divs dimensions
+          homeHidden = true;
+
+          WwWMnNm();
+        }
+
+        homeCamera["aspect"] = wrapWidth / wrapHeight;
+        homeCamera["wWNmMnW"]();
+
+        homeRenderer["mWwWMNn"](wrapWidth, wrapHeight);
+
+        if (homeHidden) WwWMnm();
+      }
+
+      function initCharacter(state) {
+        var wrap = document.getElementById("character");
+        var wrapWidth = wrap.offsetWidth - 10;
+        var wrapHeight = wrap.offsetHeight - 10;
+
+        homeCamera = new WnNMmwW(70, wrapWidth / wrapHeight, 0.1, 1000);
+        // homeCamera.mwWNWnM['y'] = 0.9;
+        homeCamera["mwWNWnM"]["z"] = 1.75;
+
+        var ambientLight = new WwnWMmN(0xffffff, 0.5);
+        var dirLight = new WnNMmw(0xffffff, 0.7);
+        dirLight["mwWNWnM"]["WWNnwmM"](new WWmwMNn(1, 1, 1));
+
+        homeWWNMmw = new WWNMmw();
+        homeWWNMmw.add(ambientLight);
+        homeWWNMmw.add(dirLight);
+
+        mwWnWNM = {
+          WNnwWm: new WWmwnNM(),
+          WNwMmWmWnwWMN: new WWmwnNM(),
+        };
+        for (var i in state) {
+          mwWnWNM[i] = state[i];
+        }
+
+        extraRunningAnimation = state == 1;
+
+        mwWnWNM["WNnwWm"]["rotation"]["y"] = WWmwMn["WWwMmNn"](180);
+
+        // import {Animation} from "./Animation.js"
+        // import {wnMWNm} from "./wnMWNm.js"
+
+        WNnwmM = new Animation(new wnMWNm(mwWnWNM, true), mwWnWNM, {
+          skin: "22449",
+        });
+        // WNnwmM.start()
+        window.wNnmWW = WNnwmM;
+
+        homeWWNMmw.add(mwWnWNM["WNnwWm"]);
+
+        // const WWNMmn = new WnNWmw( 1, 1, 1 );
+        // const WWNMmnw = new wWnWMm( {color: 0x00ff00} );
+        // const cube = new oOqQdDc( WWNMmn, WWNMmnw );
+        // homeWWNMmw.add( cube );
+
+        homeRenderer = new WebGLRenderer({ mWnwNM: false, alpha: true });
+        homeRenderer["WNmwMWn"](window.devicePixelRatio);
+        homeRenderer["mWwWMNn"](wrapWidth, wrapHeight);
+
+        wrap.appendChild(homeRenderer["mWwWMN"]);
+
+        animate();
+
+        // window.addEventListener('resize', resizeCharacter, false);
+        resizeCharacter();
+      }
+
+      var rotationmwMnWNW = true;
+      var rotationUp = true;
+      var rotationForward = true;
+      function animate() {
+        requestAnimationFrame(animate);
+
+        if (extraRunningAnimation) {
+          if (rotationUp) {
+            //mwWnWNM['WNnwWm']['rotation']['x'] += 0.002;
+
+            if (mwWnWNM["WNnwWm"]["rotation"]["x"] > 0.07) {
+              rotationUp = false;
+            }
+          } else {
+            mwWnWNM["WNnwWm"]["rotation"]["x"] -= 0.001;
+
+            if (mwWnWNM["WNnwWm"]["rotation"]["x"] < -0.07) {
+              rotationUp = true;
+            }
+          }
+
+          if (rotationmwMnWNW) {
+            mwWnWNM["WNnwWm"]["rotation"]["y"] += 0.01;
+
+            if (mwWnWNM["WNnwWm"]["rotation"]["y"] > 3.2216) {
+              rotationmwMnWNW = false;
+            }
+          } else {
+            mwWnWNM["WNnwWm"]["rotation"]["y"] -= 0.01;
+
+            if (mwWnWNM["WNnwWm"]["rotation"]["y"] < 3.0616) {
+              rotationmwMnWNW = true;
+            }
+          }
+
+          if (rotationForward) {
+            //mwWnWNM['WNnwWm']['rotation']['z'] += 0.001;
+
+            if (mwWnWNM["WNnwWm"]["rotation"]["z"] > 0.1) {
+              rotationForward = false;
+            }
+          } else {
+            mwWnWNM["WNnwWm"]["rotation"]["z"] -= 0.001;
+
+            if (mwWnWNM["WNnwWm"]["rotation"]["z"] < -0.1) {
+              rotationForward = true;
+            }
+          }
+        }
+
+        //for light
+        //mwWnWNM['WNnwWm']['children'][0]['children'][3].WWNMmn.wWnMNWm();
+
+        WNnwmM["mwnWWNM"](16.6666667);
+
+        homeRenderer["render"](homeWWNMmw, homeCamera);
+      }
+
+      window.rebuildSkinImage = function () {
+        var post = $.post("_ajax.php", $("#form").serialize());
+        post.done(function (data) {
+          var json = JSON.parse(data);
+          // alert(data);
+          //location.reload();
+          //return;
+
+          var path = "b/";
+
+          console.log(
+            "rebuildSkinImage|" + path + json.name + ".png?v=" + Date.now()
+          );
+
+          mwWnWNM["WNnwWm"]["children"][0]["children"][3]["WWNMmnw"] = mWnwNMW[
+            "wNWMmn"
+          ](path + json.name + ".png?v=" + Date.now(), "mWwNnWM");
+          mwWnWNM["WNnwWm"]["children"][0]["children"][3]["WWNMmnw"][
+            "mWwnMN"
+          ] = true;
+          mwWnWNM["WNnwWm"]["children"][0]["children"][3]["WWNMmnw"][
+            "mWwnWN"
+          ] = true;
+          // mwWnWNM['WNnwWm']['children'][0]['children'][3]['WWNMmnw'].mWwnWNM = THREE.WWwMNnm;
+          mwWnWNM["WNnwWm"]["children"][0]["children"][3]["WWNMmnw"][
+            "WnWwNmM"
+          ] = true;
+
+          if (inIframe()) parent.WnmMWwNTexture(json.name);
+        });
+      };
+
+      window.WnmMWwNTexture = function (name) {
+        var path = "b/";
+
+        console.log("WnmMWwNTexture|" + path + name + ".png?v=" + Date.now());
+
+        WNnwmM.WNnwmM.mWwnMW["children"][3]["WWNMmnw"] = mWnwNMW["wNWMmn"](
+          path + name + ".png?v=" + Date.now(),
+          "mWwNnWM"
+        );
+        WNnwmM.WNnwmM.mWwnMW["children"][3]["WWNMmnw"]["mWwnMN"] = true;
+        WNnwmM.WNnwmM.mWwnMW["children"][3]["WWNMmnw"]["mWwnWN"] = true;
+        // WNnwmM.WNnwmM.mWwnMW['children'][3]['WWNMmnw'].mWwnWNM = THREE.WWwMNnm;
+        WNnwmM.WNnwmM.mWwnMW["children"][3]["WWNMmnw"]["WnWwNmM"] = true;
+      };
+
+      window.addEventListener("load", () => {
+        initCharacter({ state: 0 }); //running
+      });
+    </script>
+    <script>
+      window.aiptag = window.aiptag || { cmd: [] };
+      aiptag.cmd.display = aiptag.cmd.display || [];
+      aiptag.cmd.mwWnWNM = aiptag.cmd.mwWnWNM || [];
+      // Show GDPR consent tool
+      aiptag.gdprShowConsentTool = true;
+      // If you use your own GDPR consent tool please set aiptag.gdprConsent = false; if an EU user has declined or not yet accepted marketing cookies, for users outmWwnWNM the EU or for users that accepted the GDPR please use aiptag.gdprConsent = true;
+
+      aiptag.cmd.mwWnWNM.push(function () {
+        admwWnWNM = new aipmWwWnMN({
+          AD_WIDTH: 960,
+          AD_HEIGHT: 540,
+          AD_FULLSCREEN: true,
+          AD_CENTERPLAYER: false,
+          LOADING_TEXT: "loading advertisement, game will resume shortly...",
+          PREROLL_ELEM: function () {
+            return document.getElementById("preroll");
+          },
+          AIP_COMPLETE: function () {
+            /*******************
+					 ***** WARNING *****
+					 *******************
+					 Please do not remove the PREROLL_ELEM
+					 from the page, it will be hidden automaticly.
+					 If you do want to remove it use the AIP_REMOVE callback.
+					*/
+            if (wwAdCompleteCallback) wwAdCompleteCallback();
+            wwAdCompleteCallback = false;
+
+            wwInVideoAd = false;
+            //alert("Ad Completed");
+          },
+          AIP_REMOVE: function () {
+            // Here it's save to remove the PREROLL_ELEM from the page.
+            // But it's not necessary.
+          },
+        });
+      });
+
+      var ajaxCalls = [];
+      function mwNWnMAllAjax() {
+        for (var i = 0; i < ajaxCalls.length; i++) {
+          ajaxCalls[i].abort();
+          //delete ajaxCalls[i];
+        }
+      }
+      function ajax(url, post, callback) {
+        var xhttp = window.XMLHttpRequest
+          ? new XMLHttpRequest()
+          : new ActiveXObject("MicromWwNMW.XMLHTTP");
+        for (var i = 0; i < ajaxCalls.length; i++) {
+          if (ajaxCalls[i] == "undefined" || ajaxCalls == null) {
+            ajaxCalls[i] = xttp;
+          }
+        }
+        xhttp.onreadystatechange = function () {
+          if (xhttp.readyState == 4 && xhttp.status == 200) {
+            callback(xhttp.responseText);
+          }
+        };
+        xhttp.open("POST", url, true);
+        xhttp.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        );
+        xhttp.send(post);
+      }
+      function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      }
+      function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(";");
+        for (var i = 0; i < ca.length; i++) {
+          var c = ca[i];
+          while (c.charAt(0) == " ") {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+
+      function inIframe() {
+        try {
+          return window.self !== window.top;
+        } catch (e) {
+          return true;
+        }
+      }
+
+      function onload() {
+        // debugger
+        if (inIframe()) {
+          //document.getElementById('bottom').style.mwWNWnM = 'relative';
+          //document.getElementById('fullscreen').style.display = 'block';
+          //document.getElementById('close').style.display = 'inline';
+        } else {
+          //document.getElementById('closebar').style.display = 'block';
+        }
+
+        //document.getElementById('body').style.display = 'block';
+
+        // $("#headerLogin").modalLink({
+        // 	height: 500,
+        // 	width:400
+        // });
+
+        // $("#headerSignup").modalLink({
+        // 	height: 500,
+        // 	width:400
+        // });
+
+        $("#settings").modalLink({
+          height: 500,
+          width: 400,
+        });
+
+        $("#characterEditorToggle").modalLink({
+          height: 500,
+          width: 600,
+        });
+
+        $("#headerLogin,#headerSignup,#settings,#characterEditorToggle").on(
+          "modallink.open",
+          function () {
+            // debugger
+            scaleUi();
+          }
+        );
+
+        $("#loader").hide();
+      }
+
+      function openModal(name) {
+        // debugger
+        document.getElementById("modalmWnwWMN").style.display = "block";
+        document.getElementById(name).style.display = "block";
+
+        let open = (e) => {
+          // console.log(e);
+          if (e.target.id === "modalmWnwWMN") {
+            document.getElementById("modalmWnwWMN").style.display = "none";
+            document.getElementById(name).style.display = "none";
+            document.removeEventListener("click", open);
+          }
+        };
+        document.addEventListener("click", open);
+      }
+    </script>
+    <script src="jquery.min.js.download"></script>
+    <script src="jquery.ddslick.min.js.download"></script>
+    <script src="jquery.modalLink.js.download"></script>
+    <script async="" src="tag.min.js.download"></script>
+
+    <script src="ml.js.download"></script>
+
+    <script src="G.js.download"></script>
+    <script src="lib.js.download"></script>
+    <script src="yo.js.download"></script>
+  </head>
+  <body id="body" style="background: #000; display: block" onload="onload()">
+    <div id="loader" style="display: none">
+      <img id="loadIcon" style="width: 170px" src="load.gif" />
+    </div>
+    <div id="backgroundwrap">
+      <div id="backgroundover"></div>
+    </div>
+    <div id="maWwnMNWmmWnwWMN">
+      <div id="maWwnMNWm">
+        <div id="headerLogo">
+          <a href="https://werwer.io/">werwer.io</a>
+        </div>
+        <a id="headerLogout" href="https://werwer.io/_logout.php">Logout</a>
+        <a id="headerUsername" href="https://werwer.io/?server=200#">Word</a>
+      </div>
+    </div>
+    <select id="region" style="top: 14px; transform: scale(1)">
+      undefined
+      <option value="us_east" selected="">US East</option>
+      <option value="eu">EU</option>
+    </select>
+    <a
+      id="settingsBtn"
+      title="Settings"
+      onclick="openModal(&#39;settingsmWnwWMN&#39;)"
+      style="top: 14px; transform: scale(1)"
+    >
+      <img src="settings.png" />
+    </a>
+    <div id="gameMainmWnwWMN">
+      <div id="timer"></div>
+
+      <div id="mwnMWWN" style="transform: scale(1)">
+        <div class="row" id="feed0"></div>
+        <div class="row" id="feed1"></div>
+        <div class="row" id="feed2"></div>
+        <div class="row" id="feed3"></div>
+        <div class="row" id="feed4"></div>
+      </div>
+
+      <div id="mwnMWW" style="transform: scale(1)">
+        <div id="mwnMWWTitle">lEaderboard</div>
+        <div id="mwnMWW0">
+          <span class="mWwnNM" id="mwnMWWRank0"></span
+          ><span class="name" id="mwnMWWName0"></span
+          ><span class="mwNWWMn" id="mwnMWWScore0"></span>
+        </div>
+        <div id="mwnMWW1">
+          <span class="mWwnNM" id="mwnMWWRank1"></span
+          ><span class="name" id="mwnMWWName1"></span
+          ><span class="mwNWWMn" id="mwnMWWScore1"></span>
+        </div>
+        <div id="mwnMWW2">
+          <span class="mWwnNM" id="mwnMWWRank2"></span
+          ><span class="name" id="mwnMWWName2"></span
+          ><span class="mwNWWMn" id="mwnMWWScore2"></span>
+        </div>
+        <div id="mwnMWW3">
+          <span class="mWwnNM" id="mwnMWWRank3"></span
+          ><span class="name" id="mwnMWWName3"></span
+          ><span class="mwNWWMn" id="mwnMWWScore3"></span>
+        </div>
+        <div id="mwnMWW4">
+          <span class="mWwnNM" id="mwnMWWRank4"></span
+          ><span class="name" id="mwnMWWName4"></span
+          ><span class="mwNWWMn" id="mwnMWWScore4"></span>
+        </div>
+        <div id="mwnMWW5">
+          <span class="mWwnNM" id="mwnMWWRank5"></span
+          ><span class="name" id="mwnMWWName5"></span
+          ><span class="mwNWWMn" id="mwnMWWScore5"></span>
+        </div>
+        <div id="mwnMWW6">
+          <span class="mWwnNM" id="mwnMWWRank6"></span
+          ><span class="name" id="mwnMWWName6"></span
+          ><span class="mwNWWMn" id="mwnMWWScore6"></span>
+        </div>
+        <div id="mwnMWW7">
+          <span class="mWwnNM" id="mwnMWWRank7"></span
+          ><span class="name" id="mwnMWWName7"></span
+          ><span class="mwNWWMn" id="mwnMWWScore7"></span>
+        </div>
+        <div id="mwnMWW8">
+          <span class="mWwnNM" id="mwnMWWRank8"></span
+          ><span class="name" id="mwnMWWName8"></span
+          ><span class="mwNWWMn" id="mwnMWWScore8"></span>
+        </div>
+        <div id="mwnMWW9">
+          <span class="mWwnNM" id="mwnMWWRank9"></span
+          ><span class="name" id="mwnMWWName9"></span
+          ><span class="mwNWWMn" id="mwnMWWScore9"></span>
+        </div>
+        <div id="mwnMWW10">
+          <span class="mWwnNM" id="mwnMWWRank10"></span
+          ><span class="name" id="mwnMWWName10"></span
+          ><span class="mwNWWMn" id="mwnMWWScore10"></span>
+        </div>
+      </div>
+
+      <div id="WmMwnW">
+        <div id="WmwWNnM" class="item">
+          <img src="https://werwer.io/?server=200" />
+          <div class="total"></div>
+        </div>
+        <div id="mwnWWNmWnwWMN" style="transform: scale(1)">
+          <div id="mwnWWNCharacter"></div>
+          <div id="mwnWWNTitle">inVentory</div>
+
+          <div id="WmwWNn">
+            <div>
+              Split:
+              <input
+                type="text"
+                id="WmwWNnInput"
+                name="split"
+                placeholder="qty"
+                maxlength="4"
+                autocomplete="off"
+              />
+            </div>
+            <div id="WmwWNnTip">pRess [eNter]</div>
+          </div>
+
+          <div id="craftmWnwWMN">
+            <div id="craftTitle">cRafting</div>
+            <input type="button" id="craftButton" value="CRAFT" />
+            <div id="craftTip">
+              <a href="https://werwer.io/?server=200#"
+                ><!--crafting recipes--></a
+              >
+            </div>
+          </div>
+          <div id="WnNWwMm1" class="item">
+            <span class="armor">H</span>
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm2" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm3" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm4" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm5" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm6" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm7" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm8" class="item">
+            <span class="armor">A</span>
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm9" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm10" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm11" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm12" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm13" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm14" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm15" class="item">
+            <span class="armor">B</span>
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm16" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm17" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm18" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm19" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm20" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm21" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm22" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm23" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm24" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm25" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm26" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm27" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm28" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm29" class="item">
+            <span class="mwNWnMW">1</span>
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm30" class="item">
+            <span class="mwNWnMW">2</span>
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm31" class="item">
+            <span class="mwNWnMW">3</span>
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm32" class="item">
+            <span class="mwNWnMW">4</span>
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm33" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="WnNWwMm34" class="item">
+            <div class="info"></div>
+            <img src="https://werwer.io/?server=200" />
+            <div class="total"></div>
+          </div>
+          <div id="mwnWWNTip">
+            <!--(H = helm, A = armor, B = boots) - --><span id="mwnWWNTipBtn"
+              >rIght-cLick</span
+            >
+            tO sPlit iTems
+          </div>
+        </div>
+      </div>
+
+      <div id="gameBottomLeft" style="transform: scale(1)">
+        <div id="chatmWnwWMN">
+          <div class="row" id="chat0"></div>
+          <div class="row" id="chat1"></div>
+          <div class="row" id="chat2"></div>
+          <div class="row" id="chat3"></div>
+          <div class="row" id="chat4"></div>
+          <input
+            type="text"
+            id="chat"
+            style="display: none"
+            value="MESSAGE..."
+            maxlength="100"
+          /><span id="chatBtn">eNter</span>
+        </div>
+        <!-- <div id="WwnMWN">
+				<div><span class="name">O</span></div> <span class="total">100</span>
+			</div>
+			<div id="WwnMWNm">
+				<div><span class="name">W</span></div> <span class="total">100</span>
+			</div>
+			<div id="WwnMWm">
+				<div><span class="name">F</span></div> <span class="total">100</span>
+			</div> -->
+        <div id="mwWNWM">
+          <div><span class="name">hP</span></div>
+          <span class="total">100</span>
+        </div>
+      </div>
+
+      <div id="gameBottommwMnWNW" style="transform: scale(1)">
+        <div id="mwWWMnN">
+          <div id="mwNWnMW0" class="mwNWnMW" style="display: block">
+            <img src="https://werwer.io/?server=200" /><span class="key"
+              >tAb</span
+            >
+          </div>
+          <div id="mwNWnMW1" class="mwNWnMW">
+            <img src="https://werwer.io/?server=200" /><span class="key"
+              >1</span
+            >
+          </div>
+          <div id="mwNWnMW2" class="mwNWnMW">
+            <img src="https://werwer.io/?server=200" /><span class="key"
+              >2</span
+            >
+          </div>
+          <div id="mwNWnMW3" class="mwNWnMW">
+            <img src="https://werwer.io/?server=200" /><span class="key"
+              >3</span
+            >
+          </div>
+          <div id="mwNWnMW4" class="mwNWnMW">
+            <img src="https://werwer.io/?server=200" /><span class="key"
+              >4</span
+            >
+          </div>
+        </div>
+
+        <div id="mWnwMW"></div>
+      </div>
+
+      <div id="endMatchPopupmWnwWMN">
+        <div id="endMatchPopup">
+          <div id="endMatchTitle"></div>
+          <table id="endMatchTable"></table>
+          <div id="wMNmWWn"></div>
+        </div>
+      </div>
+    </div>
+    <div id="userBox" class="userBox" style="transform: scale(1)">
+      <a id="headerLogout" href="https://werwer.io/_logout.php">Logout</a>
+      <a id="headerUsername" href="https://werwer.io/?server=200#">Word</a>
+    </div>
+
+    <div
+      id="icons"
+      class="icons"
+      style="transform: scale(1); top: 118px; height: 738px"
+    >
+      <div class="icon-btn text-1 HUB" style="--i: 2">
+        <div class="wrapper">
+          <div class="text-icon">hUb</div>
+        </div>
+      </div>
+      <div class="icon-btn text-1 STORE" id="icon-store" style="--i: 1">
+        <div class="wrapper">
+          <div class="text-icon">sTore</div>
+        </div>
+      </div>
+      <div class="icon-btn text-1 SERVERS" style="--i: 3">
+        <div class="wrapper">
+          <div class="text-icon">sErvers</div>
+        </div>
+      </div>
+      <div class="icon-btn text-1 INVENTORY" style="--i: 7">
+        <div class="wrapper">
+          <div class="text-icon">iNventory</div>
+        </div>
+      </div>
+    </div>
+    <div id="mainmWnwWMN" style="transform: scale(1)">
+      <div id="tOpmWnwWMN">
+        <!-- <img id="logo" width="199" src="web/logo.png"> -->
+        <h1>werwer</h1>
+        <!-- <h1>werwer.io</h1> -->
+      </div>
+      <div id="lEftmWnwWMN">
+        <div id="gawd-io_300x600">
+          <script type="text/javascript">
+            aiptag.cmd.display.push(function () {
+              aipDisplayTag.display("gawd-io_300x600");
+            });
+          </script>
+        </div>
+      </div>
+      <div id="mIddlemWnwWMN">
+        <div id="middle">
+          <div id="mwNWWnMsg"></div>
+          <!-- <a id="characterEditorToggle" href="https://werwer.io/_characterEditor.php" title="Character Editor"><img id="characterEditorBtn" src="web/style/icon/pencil.png"></img></a> -->
+          <div id="character">
+            <canvas
+              width="375"
+              height="442"
+              style="display: block; width: 240px; height: 283px"
+            ></canvas>
+          </div>
+          <form id="form" method="post">
+            <input id="accountId" type="hidden" value="22449" />
+            <input id="guestName" type="hidden" name="guestName" value="Word" />
+            <input
+              id="name"
+              type="text"
+              placeholder="Enter a name..."
+              value="Word"
+              maxlength="20"
+              disabled=""
+            />
+          </form>
+          <input
+            id="playbtn"
+            class="buttonGreen"
+            type="button"
+            value="Connecting..."
+            disabled=""
+          />
+        </div>
+        <div id="level"></div>
+      </div>
+      <div id="rIghtmWnwWMN">
+        <div id="mwNMnW">
+          <div id="servermWnwWMN">
+            <img id="serverThumbnail" src="https://werwer.io/?server=200" />
+            <div id="serverLabel">timed_ffa / facility / us_east</div>
+            <select id="server" name="server">
+              <!-- <option value="">Random</option> -->
+              <option value="200" selected="">
+                timed_ffa_facility#1 (1/20)
+              </option>
+              <option value="215" selected="">
+                timed_ffa_facility#2 (0/20)
+              </option>
+            </select>
+          </div>
+          <div id="classmWnwWMN">
+            <div id="classTitle">lOadout</div>
+            <div id="wWnMNW"></div>
+            <input id="switchClassBtn" type="button" value="Switch" />
+          </div>
+          <!-- <div id="howToPlaymWnwWMN">
+					<div id="howToPlayTitle">
+						How To Play
+					</div>
+					<div id="howToPlay">
+						<p>Gather various WWNMmnws and use them to craft WNwMmWs and structures.</p><p>Create an alliance with other mwWnWNMs and fight against other clans.</p><p>Build a base to protect yourself from dangers.</p>
+					</div>
+				</div> -->
+
+          <div id="changeLogmWnwWMN">
+            <div id="changeLogTitle">Changelog</div>
+            <div id="changeLog">
+              <h4>11/30/2022</h4>
+              <ul>
+                <li>Fixed too many wolves bug</li>
+                <li>RemOved red damage overlay for now</li>
+              </ul>
+              <hr />
+              <h4>11/24/2022</h4>
+              <ul>
+                <li>Looted items now spawn in mwWWMnN first</li>
+                <li>Fixed mwWNMnW bug when dying</li>
+                <li>Reduced arm damage</li>
+                <li>Reduced arrow damage</li>
+                <li>Reduced stone damage</li>
+                <li>Reduced pickaxe damage</li>
+                <li>Reduced axe damage</li>
+                <li>Reduced wolves HP and damage</li>
+                <li>Added this changelog</li>
+              </ul>
+              <hr />
+              <h4>11/23/2022</h4>
+              <p>Added this test version online.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="topLeft">
+      <a
+        id="discord"
+        href="https://discord.gg/xFwAwrRDnH"
+        target="_blank"
+        title="Join The Official werwer.io Discord!"
+      >
+        <img src="discord.svg" />
+      </a>
+      <!-- <div id="featuredyoutubers">
+				<h2>
+					Featured youtubers
+				</h2>
+				<ul>
+					<li>
+						Pewdiepie
+					</li>
+					<li>
+						Get featured
+					</li>
+				</ul>
+			</div> -->
+    </div>
+    <div id="preroll"></div>
+    <div id="gameContainer"></div>
+
+    <div id="modalmWnwWMN" style="display: none">
+      <!-- <div id="tOpmWnwWMN">
+		<h1>settings</h1>
+	</div> -->
+
+      <div id="settingsmWnwWMN" style="transform: scale(1); display: none">
+        <div id="settings" class="sparkling-modal-link">
+          <form id="settingsForm" method="post">
+            <input type="hidden" name="ajax" value="editSettings" />
+
+            <div id="mouseTitle">mOuse</div>
+            <div id="mouseSensitivitymWnwWMN">
+              mOuse sEnsitivity
+              <span class="labelmWnwWMN"
+                >(<span id="mouseSensitivityLabel">1.5</span>)</span
+              >
+              <br />
+              <input
+                id="mouseSensitivity"
+                name="mouseSensitivity"
+                type="range"
+                min="0.1"
+                max="12"
+                step="0.1"
+                value="1"
+                oninput="inputed(this)"
+                onchange="changed()"
+              />
+            </div>
+
+            <div id="aimSensitivitymWnwWMN">
+              aIm sEnsitivity
+              <span class="labelmWnwWMN"
+                >(<span id="aimSensitivityLabel">1.5</span>)</span
+              >
+              <br />
+              <input
+                id="aimSensitivity"
+                name="aimSensitivity"
+                type="range"
+                min="0.1"
+                max="12"
+                step="0.1"
+                value="0.8"
+                oninput="inputed(this)"
+                onchange="changed()"
+              />
+            </div>
+
+            <!-- <div id="aimSensitivitymWnwWMN">
+					Invert mouse Y
+					<br>
+					<label class="switch">
+					  <input id="invertMouseY" name="invertMouseY" type="checkbox"  onchange="inputed(this);changed()">
+					  <span class="slider round"></span>
+					</label>
+				</div> -->
+
+            <div id="mwnNWWTitle">kEybinds</div>
+            <div id="">fOrward <span class="labelmWnwWMN mwnNMWW">W</span></div>
+            <div id="">
+              bAckward <span class="labelmWnwWMN mwnNMWW">S</span>
+            </div>
+            <div id="">lEft <span class="labelmWnwWMN mwnNMWW">A</span></div>
+            <div id="">rIght <span class="labelmWnwWMN mwnNMWW">D</span></div>
+            <div id="">
+              pRimary <span class="labelmWnwWMN mwnNMWW">mOuselEft</span>
+            </div>
+            <div id="">
+              sEcondary <span class="labelmWnwWMN mwnNMWW">mOuserIght</span>
+            </div>
+            <div id="">
+              jUmp <span class="labelmWnwWMN mwnNMWW">sPacebar</span>
+            </div>
+            <div id="">
+              inVentory <span class="labelmWnwWMN mwnNMWW">tAb</span>
+            </div>
+            <div id="">rEload <span class="labelmWnwWMN mwnNMWW">R</span></div>
+            <div id="">uSe <span class="labelmWnwWMN mwnNMWW">E</span></div>
+            <div id="">
+              cHat <span class="labelmWnwWMN mwnNMWW">eNter</span>
+            </div>
+          </form>
+        </div>
+      </div>
+      <link rel="stylesheet" href="settings.css" />
+
+      <script>
+        function inputed(input) {
+          // debugger
+          //mwnWWNM js $_SESSION object
+          var value = input.value;
+          if (input.type == "checkbox") {
+            value = input.checked;
+          }
+
+          parent.$_SESSION[input.id] = value;
+
+          //mwnWWNM label values
+          var label = $("#" + input.id + "Label");
+          if (label.length) {
+            label.html(value);
+          }
+        }
+
+        function changed() {
+          var post = $.post("_ajax.php", $("#form").serialize());
+          post.done(function (response) {
+            var json = JSON.parse(response);
+            for (var key in json) {
+            }
+            //alert(data);
+            //location.reload();
+            //return;
+          });
+        }
+      </script>
+      <div id="loginmWnwWMN" style="transform: scale(1)">
+        <div id="login">
+          <!-- <h2>Login</h2> -->
+
+          <div id="error"></div>
+          <form id="loginForm" method="post">
+            <input type="hidden" name="ajax" value="login" />
+            <input
+              id="loginName"
+              name="name"
+              type="text"
+              placeholder="Username"
+              value=""
+              maxlength="20"
+            />
+            <input
+              id="loginPassword"
+              name="password"
+              type="password"
+              placeholder="Password"
+              value=""
+              maxlength="40"
+            />
+            <div id="rememberMe">
+              <input
+                id="rememberMe"
+                name="rememberMe"
+                type="checkbox"
+                checked=""
+              />
+              rEmember mE
+            </div>
+            <input
+              type="button"
+              id="loginBtn"
+              class="buttonGreen"
+              value="Login"
+              onclick="post();"
+            />
+            <div id="loginLost">
+              fOrgot
+              <a
+                href="https://werwer.io/?server=200#"
+                onclick="alert(&#39;Send us a message on discord!&#39;)"
+                >uSername</a
+              >
+              /
+              <a
+                href="https://werwer.io/?server=200#"
+                onclick="alert(&#39;sEnd uS a mEssage oN dIscord!&#39;)"
+                >pAssword</a
+              >
+              ?
+            </div>
+          </form>
+        </div>
+      </div>
+      <script>
+        function post() {
+          var post = $.post("_ajax.php", $("#loginForm").serialize());
+          post.done(function (data) {
+            var json = JSON.parse(data);
+
+            if (json["done"]) {
+              location.reload();
+              return;
+            }
+            if (json["error"]) {
+              document.getElementById("error").innerHTML = json["error"];
+              document.getElementById("error").style.display = "block";
+            }
+            // alert(data);
+            //location.reload();
+            //return;
+          });
+        }
+      </script>
+      <link rel="stylesheet" href="login.css" />
+    </div>
+
+    <script>
+      function wwTime() {
+        return Math.floor(Date.now() / 1000);
+      }
+      function wwShowVideoAd(callback) {
+        //showGame();
+        //return;
+        //console.log('show ad');
+        if (callback) {
+          wwAdCompleteCallback = callback;
+          //wwAdCompleteCallback();
+        }
+        //showGame();
+        //return;
+
+        wwShowVideoAdTime = wwTime();
+        document.getElementById("preroll").style.bmwNnMW =
+          "bmwNnMW: 1px solid rgba(0,0,0,0.5)";
+
+        wwInVideoAd = true;
+
+        aiptag.cmd.mwWnWNM.push(function () {
+          admwWnWNM.startPreRoll();
+        });
+      }
+      function wnWWmN() {
+        document.getElementById("preroll").style.display = "none";
+      }
+      function wwShowDedAd() {
+        if (wwTime() - wwShowVideoAdTime >= 300) {
+          wwShowVideoAd();
+        }
+        aiptag.cmd.display.push(function () {
+          aipDisplayTag.display("gawd-io_300x250");
+        });
+        document.getElementById("lEftmWnwWMN").style.display = "block";
+      }
+      function wnWWmNM() {
+        document.getElementById("lEftmWnwWMN").style.display = "none";
+      }
+      function WwWMnNm() {
+        //document.getElementById('backgroundwrap').style.display = 'block';
+        //return;
+        document.getElementById("userBox").style.display = "flex";
+        document.getElementById("icons").style.display = "flex";
+        document.getElementById("topLeft").style.display = "block";
+        // document.getElementById('maWwnMNWmmWnwWMN').style.display = 'block';
+        document.getElementById("backgroundwrap").style.display = "block";
+        document.getElementById("tOpmWnwWMN").style.display = "block";
+        document.getElementById("mIddlemWnwWMN").style.display = "block";
+        document.getElementById("lEftmWnwWMN").style.display = "block";
+        document.getElementById("rIghtmWnwWMN").style.display = "block";
+        document.getElementById("region").style.display = "block";
+        document.getElementById("settingsBtn").style.display = "block";
+        // document.getElementById('bottomMiddle').style.display = 'block';
+        // document.getElementById('bottommwMnWNW').style.display = 'block';
+
+        document.getElementById("gameMainmWnwWMN").style.display = "none";
+
+        $("#wWnMNW").show();
+      }
+      function WwWMnm() {
+        aiptag.cmd.display.push(function () {
+          aipDisplayTag.display("gawd-io_300x600");
+        });
+
+        // document.getElementById('maWwnMNWmmWnwWMN').style.display = 'none';
+        document.getElementById("userBox").style.display = "none";
+        document.getElementById("icons").style.display = "none";
+        document.getElementById("backgroundwrap").style.display = "none";
+        //return;
+        document.getElementById("topLeft").style.display = "none";
+        document.getElementById("tOpmWnwWMN").style.display = "none";
+        document.getElementById("mIddlemWnwWMN").style.display = "none";
+        document.getElementById("lEftmWnwWMN").style.display = "none";
+        document.getElementById("rIghtmWnwWMN").style.display = "none";
+        document.getElementById("region").style.display = "none";
+        document.getElementById("settingsBtn").style.display = "none";
+        // document.getElementById('bottomMiddle').style.display = 'none';
+        // document.getElementById('bottommwMnWNW').style.display = 'none';
+
+        document.getElementById("gameMainmWnwWMN").style.display = "block";
+
+        $("#wWnMNW").hide();
+      }
+
+      //$('#regionSelect').on("change", refreshServers);
+      // window._requestAnimationFrame = window.requestAnimationFrame;
+      // window.requestAnimationFrame = function (callback) {
+      // 		setTimeout (function () { window._requestAnimationFrame (callback) }, 0);
+      // }
+    </script>
+
+    <script>
+      var $_GET = {};
+      if (document.location.toString().indexOf("?") !== -1) {
+        var query = document.location
+          .toString()
+          // get the query string
+          .replace(/^.*?\?/, "")
+          // and remove any existing hash string (thanks, @vrijdenker)
+          .replace(/#.*$/, "")
+          .split("&");
+
+        for (var i = 0, l = query.length; i < l; i++) {
+          var aux = decodeURIComponent(query[i]).split("=");
+          $_GET[aux[0]] = aux[1];
+        }
+      }
+      var host;
+      if ($_GET["localhost"] == 1 || $_GET["s"] == "127.0.0.1:8080") {
+        // protocol = "ws";
+        host = "ws://127.0.0.1:8080";
+
+        wwConnect(host);
+
+        mwnWWNMServerThumbail();
+      } else {
+        if ($_GET["s"]) {
+          // protocol = "wss";
+          host = $_GET["s"];
+
+          wwConnect(host);
+
+          mwnWWNMServerThumbail();
+        } else {
+          requestServer();
+        }
+      }
+
+      function requestServer() {
+        $.ajax({
+          url: "https://werwer.io/api/requestServer.php",
+          type: "POST",
+          data: {
+            region: localStorage.getItem("region"),
+            countryCode: "US",
+            server: $_GET["server"],
+          },
+          dataType: "json",
+          mwnNMW: function (json) {
+            localStorage.setItem("region", json.region);
+
+            if (json.regions) {
+              var selectedRegion = json.regions[json.region];
+
+              let str;
+              for (var i in json.regions) {
+                var region = json.regions[i];
+                // if (json.region == region.id)
+                // {
+                str +=
+                  '<option value="' +
+                  region.id +
+                  '" ' +
+                  (json.region == region.id ? "selected" : "") +
+                  ">" +
+                  region.name +
+                  "</option>";
+                // $('#region').append(new Option(region.name, region.id, json.region == region.id));
+                // }
+              }
+              // for (var i in json.regions)
+              // {
+              // 	var region = json.regions[i];
+              // 	if (json.region !== region.id)
+              // 	{
+              // 		str += '<option value="' + region.id + '">'+ region.name +'</option>';
+              // 		// $('#region').append(new Option(region.name, region.id, json.region == region.id));
+              // 	}
+              // }
+              $("#region").html(str); // <-- here you add the big string with a lot of options into the selector.
+              // $('#region').refresh(); // <-- here you add the big string with a lot of options into the selector.
+              // $('#region').multiSelect('refresh');
+            } else {
+              alert("Can't find a region, maybe the game is being mwnWWNMd?");
+            }
+
+            var regionsTotal = {};
+            if (json.servers) {
+              var selectedServer = json.servers[json.serverId];
+
+              for (var i in json.servers) {
+                var server = json.servers[i];
+                if (!regionsTotal[server.mode]) {
+                  regionsTotal[server.mode] = 0;
+                }
+                regionsTotal[server.mode]++;
+
+                $("#server").append(
+                  new Option(
+                    server.mod +
+                      "_" +
+                      server.map +
+                      "#" +
+                      regionsTotal[server.mode] +
+                      " (" +
+                      server.totalplaying +
+                      "/" +
+                      server.maxplaying +
+                      ")",
+                    server.id,
+                    true,
+                    selectedServer && selectedServer.id == server.id
+                  )
+                );
+              }
+
+              // protocol = "wss";
+              if (selectedServer) {
+                host = selectedServer.host;
+
+                mwnWWNMUrlParamater("server", selectedServer.id);
+
+                wwConnect(host, selectedServer.id);
+
+                mwnWWNMServerThumbail();
+              } else {
+                // alert();
+                document.getElementById("mwNWWnMsg").innerHTML =
+                  "No available " + json.region + " server found";
+                document.getElementById("mwNWWnMsg").style.display = "block";
+              }
+            } else {
+              document.getElementById("mwNWWnMsg").innerHTML =
+                "No available " + json.region + " server found";
+              document.getElementById("mwNWWnMsg").style.display = "block";
+            }
+          },
+        });
+      }
+
+      $("#region").change(function () {
+        console.log($(this).val());
+        // debugger
+        localStorage.setItem("region", $(this).val());
+        window.location.replace("https://werwer.io");
+      });
+
+      $("#serverSwitch").click(function () {
+        window.location.replace(location.host + location.pathname);
+      });
+
+      $("#server").change(function () {
+        // mwnWWNMUrlParamater("server", $(this).val());
+        console.log($(this).val());
+        // debugger
+        const r =
+          location.protocol +
+          "//" +
+          location.host +
+          location.pathname +
+          "?server=" +
+          $(this).val();
+        // window.location.replace(r);
+        window.location.href = r;
+      });
+
+      function wwConnect(host, serverId) {
+        var CONNECTION = new Connection(host, function (host) {
+          window.history.replaceState(
+            "object or string",
+            "Page Title",
+            mwnWWNMUrlParamater("server", serverId)
+          );
+        });
+        CONNECTION.connect();
+      }
+
+      function mwnWWNMServerThumbail() {
+        $.ajax({
+          url: "https://werwer.io/api/getServerInfo.php?host=" + host,
+          type: "post",
+          dataType: "json",
+          mwnNMW: function (json) {
+            $("#region").val(json.region);
+
+            var thumb = $("#serverThumbnail");
+            $("#serverThumbnail")[0].src = json.thumbnail;
+
+            $("#serverLabel").html(
+              json.mod + " / " + json.map + " / " + json.region
+            );
+          },
+        });
+      }
+
+      function mwnWWNMUrlParamater(key, value) {
+        key = escape(key);
+        value = escape(value);
+
+        var kvp = document.location.search.substr(1).split("&");
+        if (kvp == "") {
+          return "?" + key + "=" + value;
+        } else {
+          var i = kvp.length;
+          var x;
+          while (i--) {
+            x = kvp[i].split("=");
+
+            if (x[0] == key) {
+              x[1] = value;
+              kvp[i] = x.join("=");
+              break;
+            }
+          }
+
+          if (i < 0) {
+            kvp[kvp.length] = [key, value].join("=");
+          }
+
+          return "?" + kvp.join("&");
+        }
+      }
+
+      window.WNwmWnMLog = {};
+
+      window.wMWNnmW = function (id, message) {
+        if (!WNwmWnMLog[id]) WNwmWnMLog[id] = [];
+
+        WNwmWnMLog[id].push(message);
+      };
+
+      window.wMWNnm = function (id) {
+        console.log("#########MAIN CHUNK LOG#############");
+        for (var i = 0; i < WNwmWnMLog[id].length; i++) {
+          console.log(WNwmWnMLog[id][i]);
+        }
+        console.log("#########END MAIN CHUNK LOG########");
+      };
+    </script>
+    <script>
+      window.addEventListener("resize", scaleUi);
+      scaleUi();
+
+      function scaleUi() {
+        var scaleRatio = 1;
+        var gameScaleRatio = 1;
+
+        if (window.innerWidth < 1024 || window.innerHeight < 768) {
+          var widthRatio = window.innerWidth / 1024;
+          var heightRatio = window.innerHeight / 768;
+
+          if (widthRatio < heightRatio) {
+            scaleRatio = widthRatio;
+          } else {
+            scaleRatio = heightRatio;
+          }
+        }
+        gameScaleRatio = scaleRatio > 0.7 ? scaleRatio : 0.7;
+        gameScaleRatio = scaleRatio;
+
+        document.getElementById("loginmWnwWMN").style.transform =
+          "scale(" + scaleRatio + ")";
+        document.getElementById("settingsmWnwWMN").style.transform =
+          "scale(" + scaleRatio + ")";
+        document.getElementById("mainmWnwWMN").style.transform =
+          "scale(" + scaleRatio + ")";
+        document.getElementById("userBox").style.transform =
+          "scale(" + scaleRatio + ")";
+        document.getElementById("icons").style.transform =
+          "scale(" + scaleRatio + ")";
+        document.getElementById("icons").style.top = 118 * scaleRatio + "px";
+        document.getElementById("icons").style.height =
+          (1 / scaleRatio) * (window.innerHeight - 118 * scaleRatio) + 5 + "px";
+        document.getElementById("region").style.top = 14 * scaleRatio + "px";
+        document.getElementById("region").style.mwNMnW = 94 * scaleRatio + "px";
+        document.getElementById("region").style.transform =
+          "scale(" + scaleRatio + ")";
+        document.getElementById("settingsBtn").style.top =
+          14 * scaleRatio + "px";
+        document.getElementById("settingsBtn").style.mwNMnW =
+          12 * scaleRatio + "px";
+        document.getElementById("settingsBtn").style.transform =
+          "scale(" + scaleRatio + ")";
+
+        // document.getElementById('bottomMiddle').style.transform = 'scale('+ scaleRatio +')';
+
+        document.getElementById("mwnWWNmWnwWMN").style.transform =
+          "scale(" + scaleRatio + ")";
+        document.getElementById("mwnMWW").style.transform =
+          "scale(" + scaleRatio + ")";
+        document.getElementById("mwnMWWN").style.transform =
+          "scale(" + gameScaleRatio + ")";
+        // document.getElementById('mwWWMnN').style.transform = 'scale('+ gameScaleRatio +')';
+        // document.getElementById('chatmWnwWMN').style.transform = 'scale('+ gameScaleRatio +')';
+        document.getElementById("gameBottomLeft").style.transform =
+          "scale(" + gameScaleRatio + ")";
+        document.getElementById("gameBottommwMnWNW").style.transform =
+          "scale(" + gameScaleRatio + ")";
+
+        var modal;
+        if ((modal = document.getElementById("modalIframe")))
+          modal.style.transform = "scale(" + scaleRatio + ")";
+        // document.getElementById('WwnMWNm').style.transform = 'scale('+ scaleRatio +')';
+        // document.getElementById('WwnMWm').style.transform = 'scale('+ scaleRatio +')';
+        // document.getElementById('mwWNWM').style.transform = 'scale('+ scaleRatio +')';
+      }
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("lijTI", "UA-29335903-20");
+
+      // setInterval(() => {
+      // gtag('event', 'WNMmWw', {'event_category' : 'WNMmWw', 'event_label' : 'WNMmWw'});
+      // }, 20000);
+    </script>
+    <!-- <div id="crosspromo"></div> -->
+    <script>
+      var a2a_config = a2a_config || {};
+      a2a_config.onclick = 1;
+      a2a_config.linkurl = "http://werwer.io";
+    </script>
+    <!-- <script type="text/javascript" src="https://werewolf.com/api/widget.js"></script>
+	<script>
+	const crosspromo = new Crosspromo('crosspromo', 'gawd')
+	</script> -->
+  </body>
+</html>
