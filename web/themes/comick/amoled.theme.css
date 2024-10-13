@@ -171,6 +171,7 @@ header+main.flex-grow>div+div>.xl\:container>main{
   overflow-x: hidden;
   min-height: 400px;
   max-height: 585px;
+  width: 585px;
   padding-right: var(--spaceing);
 }
 .xl\:max-w-screen-xl>.grid.md\:grid-cols-3+div>div>h2+div+div+div td,
