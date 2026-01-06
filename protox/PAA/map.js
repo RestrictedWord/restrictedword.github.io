@@ -1,8 +1,8 @@
 const MAP = {
   "Invisible Block": { locations: [{ x: 0, y: 0 }], category: "Misc", tags: ["utility", "hidden"] },
   "Big Normal Stone Bricks": { locations: [{ x: 16, y: 0 }], category: "Structure", tags: ["stone", "brick"] },
-  "Big Normal Stone Bricks with Lianas": { locations: [{ x: 32, y: 0 }], category: "Structure", tags: ["stone", "brick", "nature"] },
-  "Big Normal Stone Bricks with Moss": { locations: [{ x: 48, y: 0 }], category: "Structure", tags: ["stone", "brick", "nature"] },
+  "Big Normal Stone Bricks with Lianas": { locations: [{ x: 32, y: 0 }], category: "Structure", tags: ["stone", "brick", "Nature"] },
+  "Big Normal Stone Bricks with Moss": { locations: [{ x: 48, y: 0 }], category: "Structure", tags: ["stone", "brick", "Nature"] },
   "Stone Block": { locations: [{ x: 64, y: 0 }], category: "Structure", tags: ["stone"] },
   "Stone": { locations: [{ x: 80, y: 0 }], category: "Structure", tags: ["stone"] },
   "Stone Bricks 2": { locations: [{ x: 96, y: 0 }], category: "Structure", tags: ["stone", "brick"] },
