@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protox Atlas Assembler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+</head>
+
+<body>
+
+    <header class="app-header">
+        <h1 class="protox-title">Protox Atlas Assembler</h1>
+    </header>
+
+    <main class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Required Textures</h2>
+            </div>
+            <div class="sidebar-controls">
+                <input type="text" id="search-input" placeholder="Search blocks..." class="search-box">
+
+                <div class="tag-select-container" id="tag-dropdown-wrapper">
+                    <div class="tag-select-trigger" id="tag-select-trigger">
+                        <span id="tag-count">Filter by tags...</span>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </div>
+                    <div class="tag-dropdown" id="tag-dropdown">
+                    </div>
+                </div>
+
+                <div class="filter-row">
+                    <div class="logic-toggle">
+                        <span class="toggle-label">Match</span>
+                        <div class="toggle-btns">
+                            <button id="logic-or" class="toggle-btn active"
+                                title="At least one tag matches">Any</button>
+                            <button id="logic-and" class="toggle-btn" title="All selected tags must match">All</button>
+                        </div>
+                    </div>
+                    <select id="sort-order" class="filter-select">
+                        <option value="alpha">A-Z</option>
+                        <option value="position">Position (X/Y)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="list-header">
+                <span class="header-default">Default</span>
+                <span class="header-custom">Custom</span>
+                <span class="header-name">Block Name</span>
+            </div>
+            <ul id="list-target" class="texture-list">
+            </ul>
+        </aside>
+
+        <section class="workspace">
+
+            <div id="drop-target" class="drop-zone">
+                <div class="drop-content">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    <h3>Drag & Drop Textures</h3>
+                    <p>or click to browse</p>
+                    <input type="file" id="import" multiple accept="image/*" class="file-input">
+                </div>
+            </div>
+
+            <div class="canvas-container">
+                <div class="canvas-header">
+                    <h3>Atlas Preview</h3>
+                    <div class="actions">
+                        <button id="download" class="btn primary">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download Atlas
+                        </button>
+
+                        <button id="clear-cache" class="btn secondary" style="margin-left: 10px;">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M3 6h18"></path>
+                                <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                            </svg>
+                            Clear Cache
+                        </button>
+                        <button id="import-ui-btn" class="btn secondary" style="margin-left: 10px;">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Import Atlas
+                        </button>
+                        <input type="file" id="import-atlas-input" class="hidden" accept="image/*">
+                        <a id="download-a" class="hidden"></a>
+                    </div>
+                </div>
+                <div class="canvas-wrapper">
+                    <canvas id="output"></canvas>
+                </div>
+                <footer class="canvas-footer">
+                    <span class="footer-text">by: <span class="alea-name">Alea</span> & Word</span>
+                </footer>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="map.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
