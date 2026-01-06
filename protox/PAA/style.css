@@ -322,6 +322,20 @@ body {
   color: #fff;
 }
 
+@keyframes flash {
+  0% {
+    background-color: rgba(255, 190, 15, 0.4);
+  }
+
+  100% {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+}
+
+.texture-list li.flash-highlight {
+  animation: flash 1s ease-out;
+}
+
 .list-header {
   display: flex;
   align-items: center;
@@ -385,7 +399,7 @@ body {
 }
 
 .drop-zone {
-  background-color: typename(rgba(31, 31, 31, 0.5));
+  background-color: rgba(31, 31, 31, 0.5);
   border: 2px dashed var(--border);
   border-radius: var(--radius);
   padding: 3rem;

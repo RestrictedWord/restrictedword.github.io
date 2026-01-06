@@ -60,9 +60,24 @@ function draw(fullAtlas = false) {
   }
   ctx.drawImage(solidColors, 0, 0, currentAtlasW, currentAtlasH);
 
+
   if (highlightedTextureName && MAP[highlightedTextureName]) {
-    ctx.fillStyle = "rgba(255, 190, 15, 0.5)";
+    ctx.strokeStyle = "rgba(255, 190, 15, 0.8)";
+    ctx.lineWidth = 2;
     for (const { x, y } of MAP[highlightedTextureName].locations) {
+      ctx.strokeRect(
+        (x / 16) * cellSize.x + 1,
+        (y / 16) * cellSize.y + 1,
+        cellSize.x - 2,
+        cellSize.y - 2
+      );
+    }
+  }
+
+
+  if (hoveredCanvasBlock) {
+    ctx.fillStyle = "rgba(255, 190, 15, 0.4)";
+    for (const { x, y } of hoveredCanvasBlock.locations) {
       ctx.fillRect(
         (x / 16) * cellSize.x,
         (y / 16) * cellSize.y,
@@ -93,6 +108,7 @@ const downloadButton = document.getElementById("download");
 const downloadLink = document.getElementById("download-a");
 
 let highlightedTextureName = null;
+let hoveredCanvasBlock = null;
 
 const searchInput = document.getElementById("search-input");
 const sortOrder = document.getElementById("sort-order");
@@ -480,5 +496,59 @@ downloadButton.addEventListener("click", () => {
   draw();
   downloadLink.href = url;
   downloadLink.click();
+});
+
+canvas.addEventListener("click", (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const scaleX = canvas.width / rect.width;
+  const scaleY = canvas.height / rect.height;
+  const x = (e.clientX - rect.left) * scaleX;
+  const y = (e.clientY - rect.top) * scaleY;
+
+  const gridX = Math.floor(x / cellSize.x) * 16;
+  const gridY = Math.floor(y / cellSize.y) * 16;
+
+  for (const textureName in MAP) {
+    const locations = MAP[textureName].locations;
+    if (locations.some(loc => loc.x === gridX && loc.y === gridY)) {
+      const ref = refId(textureName);
+      const element = elementMap[ref]?.root;
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        element.classList.add("flash-highlight");
+        setTimeout(() => element.classList.remove("flash-highlight"), 1000);
+      }
+      break;
+    }
+  }
+});
+
+canvas.addEventListener("mousemove", (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const scaleX = canvas.width / rect.width;
+  const scaleY = canvas.height / rect.height;
+  const x = (e.clientX - rect.left) * scaleX;
+  const y = (e.clientY - rect.top) * scaleY;
+
+  const gridX = Math.floor(x / cellSize.x) * 16;
+  const gridY = Math.floor(y / cellSize.y) * 16;
+
+  let newHoveredBlock = null;
+  for (const textureName in MAP) {
+    if (MAP[textureName].locations.some(loc => loc.x === gridX && loc.y === gridY)) {
+      newHoveredBlock = MAP[textureName];
+      break;
+    }
+  }
+
+  if (hoveredCanvasBlock !== newHoveredBlock) {
+    hoveredCanvasBlock = newHoveredBlock;
+    draw();
+  }
+});
+
+canvas.addEventListener("mouseleave", () => {
+  hoveredCanvasBlock = null;
+  draw();
 });
 
