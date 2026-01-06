@@ -14,6 +14,31 @@ function setMissing(key, missing) {
   }
 }
 
+function showToast(message, type = 'info') {
+  const container = document.getElementById('toast-container');
+  if (!container) return;
+
+  const toast = document.createElement('div');
+  toast.className = `toast ${type}`;
+  toast.textContent = message;
+
+  container.appendChild(toast);
+
+  const removeToast = () => {
+    toast.classList.add('hide');
+    toast.addEventListener('animationend', () => {
+      toast.remove();
+    });
+  };
+
+  const timeout = setTimeout(removeToast, 4000);
+
+  toast.addEventListener('click', () => {
+    clearTimeout(timeout);
+    removeToast();
+  });
+}
+
 const atlasSize = { w: 16 * 32, h: 16 * 32 };
 
 function draw(fullAtlas = false) {
@@ -286,6 +311,24 @@ function renderList() {
     });
     element.appendChild(copyBtn);
 
+    if (textureMap[ref]) {
+      const removeBtn = document.createElement("button");
+      removeBtn.className = "remove-item-btn";
+      removeBtn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path></svg>`;
+      removeBtn.title = "Remove custom texture";
+      removeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (confirm(`Remove custom texture for ${textureName}?`)) {
+          delete textureMap[ref];
+          localStorage.removeItem(`protox_${ref}`);
+          setMissing(ref, true);
+          draw();
+          renderList();
+        }
+      });
+      element.appendChild(removeBtn);
+    }
+
     element.addEventListener("mouseenter", () => {
       highlightedTextureName = textureName;
       draw();
@@ -450,12 +493,19 @@ function splitAtlas(atlasImg) {
 
 const fileCallback = (files) => {
   for (const file of files) {
-    const id = refId(file.name.split(".").slice(0, -1).join("."));
-    if (Object.keys(MAP).some((key) => refId(key) === id)) {
+    const fileName = file.name.split(".").slice(0, -1).join(".");
+    const id = refId(fileName);
+    const isValidName = Object.keys(MAP).some((key) => refId(key) === id);
+
+    if (isValidName) {
       const url = URL.createObjectURL(file);
       const img = new Image();
       img.src = url;
       img.addEventListener("load", () => {
+        if (img.width !== 16 || img.height !== 16) {
+          showToast(`Texture '${fileName}' is ${img.width}x${img.height}. Standard size is 16x16.`, 'warning');
+        }
+
         setMissing(id, false);
         textureMap[id] = img;
         saveTexture(id, img);
@@ -467,6 +517,8 @@ const fileCallback = (files) => {
         draw();
         renderList();
       });
+    } else {
+      showToast(`Texture '${fileName}' does not match any required block.`, 'error');
     }
   }
 };
